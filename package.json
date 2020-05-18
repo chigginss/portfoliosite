@@ -1,0 +1,22 @@
+{
+  "name": "portfoliosite",
+  "version": "1.0.0",
+  "description": "Personal Portfolio Site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chigginss/portfoliosite.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chigginss/portfoliosite/issues"
+  },
+  "homepage": "https://github.com/chigginss/portfoliosite#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
