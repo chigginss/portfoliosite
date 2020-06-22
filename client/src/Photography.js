@@ -17,11 +17,11 @@ state = {
           <Router>
             <div className='navigation'>
               <nav className='routes'>
-                  <div className='route'><Link to="/">Photography</Link></div>
-                  <div className='route'><Link to="/portraits">Portraits</Link></div>
-                  <div className='route'><Link to="/nature">Nature</Link></div>
-                  <div className='route'><Link to="/landscape">Landscape</Link></div>
-                  <div className='route'><Link to="/travel">Travel</Link></div>
+                  <div className='route'><Link className='link' to="/">Creative</Link></div>
+                  <div className='route'><Link className='link' to="/portraits">People</Link></div>
+                  <div className='route'><Link className='link' to="/nature">Nature</Link></div>
+                  <div className='route'><Link className='link' to="/landscape">Landscape</Link></div>
+                  <div className='route'><Link className='link' to="/travel">Travel</Link></div>
               </nav>
 
               {/* A <Switch> looks through its children <Route>s and
@@ -39,9 +39,6 @@ state = {
                 <Route path="/portraits">
                   <Portraits />
                 </Route>
-                <Route path="/">
-                  <Home />
-                </Route>
               </Switch>
             </div>
           </Router>
@@ -51,10 +48,6 @@ state = {
 
 function Nature() {
   return <div className='routeContent'>Nature</div>
-}
-
-function Home() {
-  return <div className='routeContent'>Home</div>
 }
 
 function Landscape() {
