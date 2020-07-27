@@ -21,9 +21,32 @@
     /*width: 100%;*/
   }
 
+  .skill {
+    max-width: 60px;
+    min-width: 60px;
+  }
+
+  .resumeText {
+    color: white;
+    text-decoration: none;
+    font-weight: bolder;
+  }
+
+  .headerGraphic {
+     max-width: 300px;
+     max-height: 300px;
+  }
+
+  .topHeader {
+    justify-content: space-between;
+    display: flex;
+  }
+
   .imagesContainer {
     display: flex;
     flex-direction: column;
+    text-align: center;
+    max-width: 600px;
   }
 
   .routes {
@@ -85,11 +108,12 @@
     display: flex;
     color: #ffffff;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     padding: 10px;
     width: 100%;
     justify-content: space-between;
     font-size: calc(10px + 2vmin);
+    text-align: center;
   }
 
   .headerLink {

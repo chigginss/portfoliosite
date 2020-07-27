@@ -14,7 +14,7 @@ class Photography extends Component {
           <Router>
             <div className=''>
               <nav className='routes'>
-                  <div className='route'><Link className='link' to="/photography/">EXPERIENCE</Link></div>
+                  <div className='route'><Link className='link' to="/photography/experience">EXPERIENCE</Link></div>
                   <div className='route'><Link className='link' to="/photography/creative">Creative</Link></div>
                   <div className='route'><Link className='link' to="/photography/portraits">People</Link></div>
                   <div className='route'><Link className='link' to="/photography/nature">Nature</Link></div>
@@ -23,7 +23,7 @@ class Photography extends Component {
                   <div className='route'><Link className='link' to="/photography/events">Event</Link></div>
               </nav>
               <Switch>
-              <Route path="/photography/">
+              <Route path="/photography/experience">
                   <Experience />
                 </Route>
                 <Route path="/photography/nature">
@@ -124,7 +124,7 @@ function getLandscapeImages() {
     'big_sur_road'
   ];
   const people_images = people_image_names.map(image => {
-     return <a href={'/photography/landscapes/' + image + '.jpg'}><img className='image' alt='imagdfde' src={require(`./images/${image}.jpg`)} /></a>
+     return <a href={'/photography/landscapes/' + image + '.jpg'}><img className='image' alt='imagdfde' src={require(`./images/${image}.jpg`)} fluid /></a>
   });
   return people_images;
 }
@@ -155,7 +155,7 @@ function getNatureImages() {
     'new_zealand_road'
   ];
   const people_images = people_image_names.map(image => {
-     return <a href={'/photography/nature/' + image + '.jpg'}><img className='image' alt='imagdfde' src={require(`./images/${image}.jpg`)} /></a>
+     return <a href={'/photography/nature/' + image + '.jpg'}><img className='image' alt='imagdfde' src={require(`./images/${image}.jpg`)} fluid /></a>
   });
   return people_images;
 }
@@ -169,7 +169,7 @@ function getCreativeImages() {
     'jordan_water_portrait',
   ];
   const people_images = people_image_names.map(image => {
-     return <a href={'/photography/landscapes/' + image + '.jpg'}><img className='image' alt='imagdfde' src={require(`./images/${image}.jpg`)} /></a>
+     return <a href={'/photography/landscapes/' + image + '.jpg'}><img className='image' alt='imagdfde' src={require(`./images/${image}.jpg`)} fluid /></a>
   });
   return people_images;
 }
@@ -231,7 +231,7 @@ function getTravelImages() {
     'yoyogi_park'
   ];
   const people_images = people_image_names.map(image => {
-     return <a href={'/photography/landscapes/' + image + '.jpg'}><img className='image' alt='imagdfde' src={require(`./images/${image}.jpg`)} /></a>
+     return <a href={'/photography/landscapes/' + image + '.jpg'}><img className='image' alt='imagdfde' src={require(`./images/${image}.jpg`)} fluid /></a>
   });
   return people_images;
 }

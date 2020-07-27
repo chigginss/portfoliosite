@@ -6,9 +6,25 @@ import {
   Link
 } from "react-router-dom";
 import logo from './images/logo.svg';
-import email from './images/email.png'
-import github_logo from './images/github_icon.png'
-import linkedin_logo from './images/linkedin_logo.png'
+import email from './images/email.png';
+import github_logo from './images/github_icon.png';
+import computer_graphic from './images/computer_graphic.jpg';
+import linkedin_logo from './images/linkedin_logo.png';
+import wday from './videos/what_dragon_are_you.mp4';
+import ajax from './icons/ajax-logo.png';
+import aws from './icons/aws-logo.png';
+import cypress from './icons/cypress-logo.png';
+import d3 from './icons/d3.png';
+import flask from './icons/flask-logo.png';
+import html5 from './icons/HTML5-logo.png';
+import css3 from './icons/icons8-css3-50.png';
+import js from './icons/icons8-javascript-logo-50.png';
+import json from './icons/icons8-json-50.png';
+import nodejs from './icons/icons8-nodejs-32.png';
+import python from './icons/icons8-python-26.png';
+import react from './icons/icons8-react-100.png';
+import sass from './icons/icons8-sass-50.png';
+import jquery from './icons/jquery-logo.png';
 import Photography from './Photography.js';
 import './App.css';
 
@@ -23,7 +39,7 @@ state = {
       .then(res => this.setState({ data: res.express }))
       .catch(err => console.log(err));
   }
-    // Fetches our GET route from the Express server. (Note the route we are fetching matches the GET route from server.js
+    // Fetches GET route in server.js from the Express server
   callBackendAPI = async () => {
     const response = await fetch('/express_backend');
     const body = await response.json();
@@ -39,7 +55,8 @@ state = {
       <div className='portfolioHome'>
         <Router>
           <div className='header'>
-            <div className=''>
+            <div><img src={computer_graphic} className="headerGraphic" alt="computer"/></div>
+            <div className='topHeader'>
               <a href="mailto:cierramhiggins@gmail.com"><img src={email} className="icon" alt="logo"/></a>
               <a href='https://github.com/chigginss'><img src={github_logo} className="icon" alt="logo"/></a>
               <a href='https://www.linkedin.com/in/cierra-m-higgins/'><img src={linkedin_logo} className="icon" alt="logo" /></a>
@@ -73,21 +90,32 @@ state = {
 
 function Home() {
   return <div className='routeContent'>
-    <h1 className="title">Hi, I'm Cierra</h1>
-    <img src={logo} className="logo" alt="logo" />
-    <p className="text">I'm an full stack software engineer with 2+ years experience. I work on web, mobile and game design.</p>
-    <p className="text">I'm not your typical engineer--Previously, I worked as a photographe, PR data analyst, and interned for a US senator. I also have a degree in English Literature.</p>
-    <p className="text">I love gaming (Dark Souls, The Last of Us, The Witcher, BOTW). </p>
-    <p className="text">I grew up in Montana and love spending time in nature. </p>
-    <p className="text">To To view my work as a photographer, view the 'Photography' Tab.</p></div>;
+    <h1 className="title">Hi, I'm Cierra Higgins</h1>
+    <h2 className="title">Software Engineer with an English Degree.</h2>
+    <p className="text">I'm an full stack software developer with 2+ years experience. Currently based in San Francisco, I work on web and mobile platforms.</p>
+    <a className="resumeButton" href="mailto:cierramhiggins@gmail.com">CONTACT</a>
+  </div>;
 }
 
 function Experience() {
-  return <div className='routeContent'><h2 className="title">I'm an established engineer with diverse experience.</h2>
-  <a className="resumeButton" href="resume.pdf" target="_blank">View Resume</a>
+  return <div className='routeContent'>
   <h3>Tech Stack</h3>
-  <p className='paragraph'>Javascript (Node.js), Python, React Native, React, Express, Cypress, jQuery, SCSS/CSS, HTML5, Flask, AJAX, D3.js, AWS</p>
-  <h3>WORK</h3>
+  <div>
+    <img src={nodejs} className="skill" alt="logo" />
+    <img src={react} className="skill" alt="logo" />
+    <img src={jquery} className="skill" alt="logo" />
+    <img src={python} className="skill" alt="logo" />
+    <img src={css3} className="skill" alt="logo" />
+    <img src={ajax} className="skill" alt="logo" />
+    <img src={html5} className="skill" alt="logo" />
+    <img src={cypress} className="skill" alt="logo" />
+    <img src={d3} className="skill" alt="logo" />
+    <img src={flask} className="skill" alt="logo" />
+    <img src={js} className="skill" alt="logo" />
+    <img src={json} className="skill" alt="logo" />
+    <img src={sass} className="skill" alt="logo" />
+  </div>
+  <a className="resumeButton" href="resume.pdf" target="_blank">View Resume</a>
   <div className="experienceCard">
     <div className="experienceCardHeader">
       <h2 className="position">Software Engineer</h2>
@@ -131,11 +159,13 @@ function Experience() {
   </div>
   <div className="experienceCard">
     <div className="experienceCardHeader">
-      <h2 className="position">CSSth Lord</h2>
-      <div className="years">In Progress</div>
+      <h2 className="position">Instagram Effect: 'Which Dragon are You?'</h2>
     </div>
     <div className='experineceCardText'>
-      <p>A current project I am working on to create a CSS Star Wars meme generator.</p>
+      <video width="300" height="500" autoPlay loop >
+        <source src={wday} type="video/mp4"/>
+      </video>
+      <p>Developed using Facebook's Spark AR Studio.</p>
     </div>
   </div>
   <div className="experienceCard">
