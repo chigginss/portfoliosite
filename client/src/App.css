@@ -1,29 +1,42 @@
 
-  .portfolioHome {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  :root {
+    --navy: #0f0d25;
   }
 
-  .navigation {
+  $base-color: #0f0d25;
+  $border-dark: rgba($base-color, 0.88);
+
+  .hamburgerMenu {
+    display: none;
+  }
+
+  .bigTitle {
+    font-size: 30px;
+    color: white;
+  }
+
+  .headerGraphic {
+     max-width: 300px;
+     max-height: 300px;
+  }
+
+  .contactInfo {
     display: flex;
-    flex-direction: row;
-    flex: .6;
-    width: 100%;
+    flex-direction: column;
     justify-content: flex-start;
-    color: #ffffff;
-    font-weight: bolder;
+    align-items: flex-start;
+    position: fixed;
   }
 
   .image {
     max-width: 800px;
     max-height: 600px;
-    /*width: 100%;*/
   }
 
-  .skill {
-    max-width: 60px;
-    min-width: 60px;
+  .portfolioHome {
+    display: flex;
+    flex-direction: column;
+    background-color: $base-color;
   }
 
   .resumeText {
@@ -32,15 +45,13 @@
     font-weight: bolder;
   }
 
-  .headerGraphic {
-     max-width: 300px;
-     max-height: 300px;
+  .skill {
+    max-width: 60px;
+    min-width: 60px;
   }
 
-  .topHeader {
-    justify-content: space-between;
-    display: flex;
-  }
+
+
 
   .imagesContainer {
     display: flex;
@@ -65,6 +76,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: #0f0d25;
   }
 
   .route {
@@ -83,11 +95,11 @@
   }
 
   .title {
-    color: #282c34;
+    color: #ff9c00;
   }
 
   .text {
-    color: #282c34;
+    color: #ffffff;
   }
 
   .logo {
@@ -96,15 +108,14 @@
   }
 
   .icon {
-    background-color: #ffffff;
     margin: 20px;
-    height: 25px;
-    width: 25px;
+    height: 35px;
+    width: 35px;
   }
 
   .header {
     /*background-color: #282c34;*/
-    background-color: #000000;
+    background-color: #0f0d25;
     display: flex;
     color: #ffffff;
     flex-direction: column;
@@ -123,70 +134,78 @@
 
   .resumeButton {
     padding: 10px;
-    color: red;
-    background: white;
+    color: #ff9c00;
     text-decoration: none;
-    border: 1px solid red;
+    border: 1px solid #ff9c00;
     font-weight: bolder;
     border-radius: 10px;
+
+  }
+
+  .resumeButton:hover {
+    background-color: #332c82;
   }
 
   .experienceCard {
-    border: 1px solid black;
-    border-radius: 10px;
+    text-align: left;
+    /*border-left: 1px solid #ff9c00;*/
     max-width: 400px;
     width: 100%;
     margin: 10px;
+    left: 50%;
+  }
+
+  .experience {
+    div:nth-child(1n) {
+      border-left: 1px solid #ff9c00;
+    }
   }
 
   .experineceCardText {
     padding: 10px;
+    color: #ffffff;;
   }
 
   .experienceCardHeader {
     text-align: center;
-    background-color: #282c34;
-    color: white;
+    background-color: #0f0d25;
+    color: #ffffff;
     padding: 10px;
+    text-align: left;
     border-radius: 9px 9px 0px 0px;
   }
 
   .position {
+    color: #ff9c00;
     font-weight: bold;
   }
 
   .company {
-    color: red;
+    color: #ffffff;
+    font-weight: bolder;
   }
 
   .years {
-    font-weight: lighter;
+    color: #ffffff;
+    font-style: italic;
   }
 
-  @media (prefers-reduced-motion: no-preference) {
-    .logo {
-      animation: logo-spin infinite 20s linear;
-    }
+  .topHeader {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
   }
 
-  @media only screen (min-width: 600px) {
-    .navigation {
-      flex-direction: column;
+  @media (max-width: 600px) {
+    .contactInfo {
+      flex-direction: row;
+      position: relative;
       justify-content: center;
+      cursor: pointer;
     }
-  }
-
-  @media only screen (min-width: 600px) {
-    .routes {
-      display: block;
-    }
-  }
-
-  @keyframes logo-spin {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
+    .hamburgerMenu {
+      display: flex;
+      justify-content: flex-end;
+      background-color: #0f0d25;
     }
   }
