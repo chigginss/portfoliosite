@@ -1,14 +1,17 @@
 $navy-base: #0f0d25;
 $orange-base: #ff9c01;
-$light-white-base: #ffffff;
 $navy: rgba($navy-base, 100);
-$orange-color: rbga($orange-base, 100);
-$light-white: rbga($light-white-base, 0.88);
+$orangee: rbga($orange-base, 100);
 $small-spacing: 10px;
 
-.bigTitle {
-  font-size: 30px;
+.about {
   color: white;
+  max-width: 600px;
+}
+
+.bigTitle {
+  color: #ff9c01;
+  font-size: 30px;
 }
 
 .headerGraphic {
@@ -137,7 +140,7 @@ $small-spacing: 10px;
 }
 
 .position {
-  color: $orange-color;
+  color: $orangee;
   font-weight: bold;
 }
 

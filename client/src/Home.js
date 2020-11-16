@@ -6,10 +6,10 @@ import {
   Link
 } from "react-router-dom";
 import './portfolio.scss';
-import BarChart from './BarChart.js';
-import Header from './Header.js';
 import About from './About.js';
+import Contact from './Contact.js';
 import Experience from './Experience.js';
+import Header from './Header.js';
 
 class Home extends Component {
 state = {
@@ -39,6 +39,7 @@ state = {
         <Header/>
         <About/>
         <Experience/>
+        <Contact/>
         <div className="footer">Designed and built by Cierra Higgins</div>
       </div>
     );

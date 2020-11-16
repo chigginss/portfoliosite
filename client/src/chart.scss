@@ -1,0 +1,84 @@
+$navy-base: #0f0d25;
+$orange-base: #ff9c01;
+$light-white-base: #ffffff;
+$navy: rgba($navy-base, 100);
+$orange-color: rbga($orange-base, 100);
+$light-white: rbga($light-white-base, 0.88);
+$small-spacing: 10px;
+
+.chart {
+  width: 700px;
+  margin: 10px;
+  border-left: 1px solid white;
+  border-bottom: 1px solid white;
+  display: flex;
+  flex-direction: column;
+}
+
+.chartContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.line {
+  width: 3px;
+  color: #ffffff;
+  height: 100px;
+  z-index: -1;
+  position: relative;
+}
+
+.labels {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.xaxis {
+  color: white;
+  padding: 10px;
+  font-size: 26px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.yaxis {
+  color: white;
+  font-size: 20px;
+}
+
+.percent {
+  color: white;
+  font-weight: bold;
+  opacity: .7;
+  padding-left: 10px;
+  padding-top: 10px;
+  font-size: 26px;
+}
+
+.label {
+  padding-left: 10px;
+  padding-bottom: 10px;
+  color: white;
+}
+
+.barContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: $small-spacing;
+}
+
+.bar {
+  background-color: #ff9c01;
+  max-height: 100px;
+  border-radius: 0px 4px 4px 0px;
+}
+
+@media (max-width: 600px) {
+  .chart {
+    width: 300px;
+  }
+}

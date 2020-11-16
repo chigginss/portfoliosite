@@ -12,15 +12,14 @@ class Experience extends Component {
           <div className="experienceCardHeader">
             <h2 className="position">Software Engineer</h2>
             <div className="company">Grokker</div>
-            <div className="years">August 2018 - Present (2 Years)</div>
+            <div className="years">August 2018 - Present (2+ Years)</div>
           </div>
           <div className='experineceCardText'>
             <ul>
               <li>Designed and implemented a myriad of features on web and mobile platforms for consumer and enterprise users</li>
-              <li>Developed ‘Streaks’ feature, which was named a Top HR Product of 2019 by Human Resource Executive® Magazine</li>
               <li>Improved Web Accessibility to meet WCAG AA standards</li>
               <li>Designed and created admin tools for internal use</li>
-              <li>Filled data requests and created reports for customer success teams</li>
+              <li>Filled data requests and created reports for internal customer success teams and clients</li>
             </ul>
           </div>
         </div>
@@ -33,20 +32,30 @@ class Experience extends Component {
           <div className='experineceCardText'>
             <ul>
               <li>Analyzed media coverage and delivered PR insights exclusively for Microsoft Public Affairs teams.</li>
-              <li>Measured social data for Microsoft using Netbase, TweetReachPro and other social monitoring tools</li>
-              <li>Researched social media influencers and potential audiences using comScore and other tools</li>
+              <li>Generated reports using PowerBI, Netbase, TweetReachPro and other tools</li>
               <li>Assisted Business Intelligence team with data cleaning and providing terms for SQL queries</li>
+            </ul>
+          </div>
+        </div>
+        <div className="experienceCard">
+          <div className="experienceCardHeader">
+            <h2 className="position">Full Stack Web Engineer</h2>
+            <div className="company">Hackbright Academy</div>
+            <div className="years">March 2018 - May 2018</div>
+          </div>
+          <div className='experineceCardText'>
+            <ul>
+              <li>Accelerated 12-week software engineering program for women. Hackbright is highly selective (5% acceptance rate).</li>
+              <li> Studied computer science fundamentals, object-oriented design, agile development and best practices through pair programming and individual study.</li>
             </ul>
           </div>
         </div>
         <h3 className="bigTitle">PROJECTS</h3>
         <div className="experienceCard">
-          <div className="experienceCardHeader">
-            <h2>Personal Site</h2>
-          </div>
+          <h2 className="experienceCardHeader">Personal Site</h2>
           <div className='experineceCardText'>
             <p>This very site you are looking at now!</p>
-            <p>Built with Node.js, React (Hooks, Router, React Test Library), SASS, HTML</p>
+            <p>Built with React, Node.js, Express.js, and SASS</p>
           </div>
         </div>
         <div className="experienceCard">
