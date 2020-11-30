@@ -5,7 +5,8 @@ class BarChart extends Component {
 
     render() {
         return (
-            <div>
+            <div className="barChart">
+             <h3 className="bigTitle">Tech Stack</h3>
              <div className="chart">
                 <div className="barContainer">
                     <div className="bar" style={{"width": "90%"}}>

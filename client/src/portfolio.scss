@@ -6,12 +6,253 @@ $small-spacing: 10px;
 
 .about {
   color: white;
-  max-width: 600px;
+  align-items: center;
+  background-color: $navy;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .bigTitle {
   color: #ff9c01;
   font-size: 30px;
+}
+
+.open {
+  position: absolute;
+  top: 5%;
+  right: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 2rem;
+  height: 2rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10;
+
+  &:focus {
+    outline: none;
+  }
+
+  div {
+    width: 2rem;
+    height: 0.25rem;
+    background: $navy;
+    border-radius: 10px;
+    transition: all 0.3s linear;
+    position: relative;
+    transform-origin: 1px;
+
+    :first-child {
+      transform: rotate(45deg);
+    }
+
+    :nth-child(2) {
+      opacity: 0;
+      transform: translateX(20px);
+    }
+
+    :nth-child(3) {
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+.closed {
+  position: absolute;
+  top: 5%;
+  right: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 2rem;
+  height: 2rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10;
+
+  &:focus {
+    outline: none;
+  }
+
+  div {
+    width: 2rem;
+    height: 0.25rem;
+    background: white;
+    border-radius: 10px;
+    transition: all 0.3s linear;
+    position: relative;
+    transform-origin: 1px;
+
+    :first-child {
+      transform: rotate(0);
+    }
+
+    :nth-child(2) {
+      opacity: '1';
+      transform: translateX(0);
+    }
+
+    :nth-child(3) {
+      transform: rotate(0);
+    }
+  }
+}
+
+.burgerClosed {
+  position: absolute;
+  top: 5%;
+  right: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 2rem;
+  height: 2rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10;
+
+  &:focus {
+    outline: none;
+  }
+
+  div {
+    width: 2rem;
+    height: 0.25rem;
+    background: white;
+    border-radius: 10px;
+    transition: all 0.3s linear;
+    position: relative;
+    transform-origin: 1px;
+
+    :first-child {
+      transform: rotate(45deg);
+    }
+
+    :nth-child(2) {
+      opacity: '0';
+      transform: translateX(20px);
+    }
+
+    :nth-child(3) {
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+.burgerOpen {
+  position: absolute;
+  top: 5%;
+  right: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 2rem;
+  height: 2rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10;
+
+  &:focus {
+    outline: none;
+  }
+
+  div {
+    width: 2rem;
+    height: 0.25rem;
+    background: $navy;
+    border-radius: 10px;
+    transition: all 0.3s linear;
+    position: relative;
+    transform-origin: 1px;
+
+    :first-child {
+      transform: rotate(45deg);
+    }
+
+    :nth-child(2) {
+      opacity: '0';
+      transform: translateX(20px);
+    }
+
+    :nth-child(3) {
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+.menuOpen {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background: white;
+  height: 455vh;
+  text-align: left;
+  padding: 2rem;
+  position: absolute;
+  top: 0;
+  right: -20px;
+  transition: transform 0.3s ease-in-out;
+  
+  a {
+    font-size: 2rem;
+    text-transform: uppercase;
+    padding: 2rem 0;
+    font-weight: bold;
+    letter-spacing: 0.3rem;
+    color: $navy;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.3s linear;
+
+    :first-child {
+      margin-top: 20px;
+    }
+
+    &:hover {
+      color: $navy;
+    }
+  }
+}
+
+.menuClosed {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background: white;
+  height: 455vh;
+  text-align: left;
+  padding: 2rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transition: transform 0.3s ease-in-out;
+  opacity: 0;
+  
+  a {
+    font-size: 2rem;
+    text-transform: uppercase;
+    padding: 2rem 0;
+    font-weight: bold;
+    letter-spacing: 0.3rem;
+    color: $navy;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.3s linear;
+
+    &:hover {
+      color: $navy;
+    }
+  }
 }
 
 .headerGraphic {
@@ -31,6 +272,18 @@ $small-spacing: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.contact {
+  align-items: center;
+  background-color: $navy;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 400px;
+  margin: $small-spacing;
+  text-align: center;
 }
 
 .company {
@@ -46,10 +299,24 @@ $small-spacing: 10px;
   width: 100%;
 }
 
+.dropdownMenu {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  z-index: 9999;
+}
+
+.dropdownItem {
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+  position: absolute;
+}
+
 .experienceCard {
-  margin: $small-spacing;
   padding: $small-spacing;
   width: 600px;
+  border-left: 1px solid #ff9c01;
 }
 
 .experience {
@@ -73,7 +340,7 @@ $small-spacing: 10px;
   text-align: left;
 }
 
-.footer {
+.footerText {
   color: #ff9c01;
   display: flex;
   padding: $small-spacing;
@@ -97,6 +364,7 @@ $small-spacing: 10px;
   padding: $small-spacing;
   text-align: center;
   width: 100%;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .headerContent {
@@ -108,7 +376,9 @@ $small-spacing: 10px;
   width: 100%;
   justify-content: space-between;
   font-size: calc($small-spacing + 2vmin);
+  font-family: 'Montserrat', sans-serif;
   text-align: center;
+  margin: 0px;
 }
 
 .headerLink {
@@ -139,6 +409,10 @@ $small-spacing: 10px;
   pointer-events: none;
 }
 
+.menu {
+  opacity: 1;
+}
+
 .position {
   color: $orangee;
   font-weight: bold;
@@ -157,6 +431,7 @@ $small-spacing: 10px;
   font-weight: bolder;
   padding: $small-spacing;
   text-decoration: none;
+  margin: $small-spacing;
 }
 
 .resumeButton:hover {
@@ -169,15 +444,6 @@ $small-spacing: 10px;
   font-weight: bolder;
 }
 
-.routeContent {
-  align-items: center;
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  justify-content: center;
-  margin-top: 60px;
-}
-
 .skill {
   max-width: 60px;
   min-width: 60px;
@@ -186,6 +452,7 @@ $small-spacing: 10px;
 .title {
   color: #ff9c00;
   margin: $small-spacing;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .topHeader {
@@ -197,6 +464,7 @@ $small-spacing: 10px;
 .text {
   color: #ffffff;
   text-align: center;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .years {
@@ -205,6 +473,12 @@ $small-spacing: 10px;
 }
 
 @media (max-width: 600px) {
+
+  .about {
+    padding: $small-spacing;
+    justify-content: flex-start;
+  }
+
   .contactInfo {
     display: none;
   }
