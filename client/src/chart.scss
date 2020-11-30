@@ -6,11 +6,14 @@ $orange-color: rbga($orange-base, 100);
 $light-white: rbga($light-white-base, 0.88);
 $small-spacing: 10px;
 
+.barChart {
+  background-color: $navy;
+  padding: 20px;
+}
+
 .chart {
-  width: 700px;
-  margin: 10px;
+  width: 600px;
   border-left: 1px solid white;
-  border-bottom: 1px solid white;
   display: flex;
   flex-direction: column;
 }
@@ -21,17 +24,10 @@ $small-spacing: 10px;
   justify-content: space-evenly;
 }
 
-.line {
-  width: 3px;
-  color: #ffffff;
-  height: 100px;
-  z-index: -1;
-  position: relative;
-}
-
 .labels {
   display: flex;
   flex-direction: row;
+  border-top: 1px solid white;
   justify-content: space-between;
 }
 
@@ -80,5 +76,7 @@ $small-spacing: 10px;
 @media (max-width: 600px) {
   .chart {
     width: 300px;
+    margin: 0px;
+    padding: 0px;
   }
 }

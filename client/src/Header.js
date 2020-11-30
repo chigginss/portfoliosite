@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import hamburger_menu from './images/hamburger_menu.png';
 import computer_graphic from './images/computer_logo.jpeg';
 import email from './images/gmail_35.png';
 import github_logo from './images/github_35.png';
@@ -10,9 +9,6 @@ class Header extends Component {
   render() {
     return (
         <div className="headerContent">
-          <div className="hamburgerMenu">
-            <img src={hamburger_menu} className="icon" alt="hamburger menu"/>
-          </div>
           <div className='header'>
             <div>
               <img src={computer_graphic} className="headerGraphic" alt="computer"/>

@@ -6,7 +6,7 @@ class Experience extends Component {
 
   render() {
     return (
-      <div className="content">
+      <div className="content" id="experience">
         <h3 className="bigTitle">EXPERIENCE</h3>
         <div className="experienceCard">
           <div className="experienceCardHeader">
@@ -50,7 +50,7 @@ class Experience extends Component {
             </ul>
           </div>
         </div>
-        <h3 className="bigTitle">PROJECTS</h3>
+        <h3 id="projects" className="bigTitle">PROJECTS</h3>
         <div className="experienceCard">
           <h2 className="experienceCardHeader">Personal Site</h2>
           <div className='experineceCardText'>
@@ -58,16 +58,14 @@ class Experience extends Component {
             <p>Built with React, Node.js, Express.js, and SASS</p>
           </div>
         </div>
-        <div className="experienceCard">
-          <div className="experienceCardHeader">
-            <h2 className="position center">Instagram Effect: 'Which Dragon are You?'</h2>
-          </div>
-          <div className='experineceCardText'>
-            <video width="300" height="500" autoPlay loop >
-              <source src={wday} type="video/mp4"/>
-            </video>
-            <p>Developed using Facebook's Spark AR Studio.</p>
-          </div>
+        <div className="experienceCardHeader">
+          <h2 className="position center">Instagram Effect: 'Which Dragon are You?'</h2>
+        </div>
+        <video width="300" height="500" autoPlay loop >
+          <source src={wday} type="video/mp4"/>
+        </video>
+        <div className='experineceCardText'>
+          <p>Developed using Facebook's Spark AR Studio.</p>
         </div>
         <div className="experienceCard">
           <div className="experienceCardHeader">
