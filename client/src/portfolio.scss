@@ -105,9 +105,9 @@ $small-spacing: 10px;
 }
 
 .burgerClosed {
-  position: absolute;
-  top: 5%;
-  right: 2rem;
+  position: fixed;
+  top: 1%;
+  right: 1%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -117,7 +117,7 @@ $small-spacing: 10px;
   border: none;
   cursor: pointer;
   padding: 0;
-  z-index: 10;
+  z-index: 9999;
 
   &:focus {
     outline: none;
@@ -150,7 +150,6 @@ $small-spacing: 10px;
 .burgerOpen {
   position: absolute;
   top: 5%;
-  right: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -159,7 +158,6 @@ $small-spacing: 10px;
   background: transparent;
   border: none;
   cursor: pointer;
-  padding: 0;
   z-index: 10;
 
   &:focus {
@@ -225,7 +223,7 @@ $small-spacing: 10px;
 }
 
 .menuClosed {
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: flex-start;
   background: white;
@@ -293,10 +291,12 @@ $small-spacing: 10px;
 
 .contactInfo {
   align-items: flex-start;
+  top: 50px;
   display: flex;
   flex-direction: column;
   position: fixed;
   width: 100%;
+  
 }
 
 .dropdownMenu {
@@ -365,6 +365,23 @@ $small-spacing: 10px;
   text-align: center;
   width: 100%;
   font-family: 'Montserrat', sans-serif;
+}
+
+.headerName {
+  color: white;
+  font-size: 18px;
+  padding-left: 20px;
+}
+
+.headerBar {
+  display: flex;
+  background-color: $navy;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  top: 0px;
+  position: fixed;
+  z-index: 9997;
 }
 
 .headerContent {
@@ -487,10 +504,15 @@ $small-spacing: 10px;
     align-items: flex-end;
   }
 
+  .headerBar {
+    justify-content: space-evenly;
+    width: 100%;
+  }
+
   .experienceCard {
     margin: $small-spacing;
     padding: $small-spacing;
-    width: 400px;
+    width: 300px;
   }
 
   .hamburgerMenu {
