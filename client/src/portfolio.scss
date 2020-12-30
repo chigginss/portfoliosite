@@ -3,6 +3,8 @@ $orange-base: #ff9c01;
 $navy: rgba($navy-base, 100);
 $orangee: rbga($orange-base, 100);
 $small-spacing: 10px;
+// GOOGLE FONTS
+@import url('https://fonts.googleapis.com/css2?family=Arvo&family=Bungee&family=Josefin+Sans&family=Mukta:wght@200&family=Spartan:wght@200;570;600&family=Yanone+Kaffeesatz:wght@200&display=swap');
 
 .about {
   color: white;
@@ -13,9 +15,20 @@ $small-spacing: 10px;
   justify-content: flex-start;
 }
 
+.hugeTitle {
+  color: #ff9c01;
+  font-size: 45px;
+  font-family: 'Spartan', sans-serif;
+  font-weight: bold;
+  text-align: center;
+}
+
 .bigTitle {
   color: #ff9c01;
-  font-size: 30px;
+  font-size: 20px;
+  font-family: 'Spartan', sans-serif;
+  font-weight: bold;
+  text-align: center;
 }
 
 .open {
@@ -270,7 +283,8 @@ $small-spacing: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Spartan', sans-serif;
+  font-weight: 570;
 }
 
 .contact {
@@ -316,7 +330,11 @@ $small-spacing: 10px;
 .experienceCard {
   padding: $small-spacing;
   width: 600px;
-  border-left: 1px solid #ff9c01;
+  margin: $small-spacing;
+  display: flex;
+  flex-direction: row;
+  text-align: center; 
+  border-radius: $small-spacing;
 }
 
 .experience {
@@ -329,15 +347,23 @@ $small-spacing: 10px;
 
 .experineceCardText {
   color: white;
+  font-family: 'Spartan', sans-serif;
+  text-align: left;
   font-size: calc($small-spacing + 2vmin);
 }
 
 .experienceCardHeader {
-  text-align: center;
-  background-color: $navy;
-  color: white;
-  padding: $small-spacing;
+  background-color: white;
+  color: $orange-base;
   text-align: left;
+  font-family: 'Spartan', sans-serif;
+  padding: 20px;
+  width: 120px;
+}
+
+.experienceCardSubHeader {
+  color: $orange-base;
+  font-size: 14px;
 }
 
 .footerText {
@@ -368,9 +394,10 @@ $small-spacing: 10px;
 }
 
 .headerName {
-  color: white;
+  color: $orange-base;
   font-size: 18px;
   padding-left: 20px;
+  font-family: 'Bungee', cursive;
 }
 
 .headerBar {
@@ -393,7 +420,7 @@ $small-spacing: 10px;
   width: 100%;
   justify-content: space-between;
   font-size: calc($small-spacing + 2vmin);
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Spartan', sans-serif;
   text-align: center;
   margin: 0px;
 }
@@ -445,7 +472,8 @@ $small-spacing: 10px;
   color: #ff9c01;
   border: 1px solid #ff9c01;
   border-radius: $small-spacing;
-  font-weight: bolder;
+  font-size: 18px;
+  font-family: 'Bungee', cursive;
   padding: $small-spacing;
   text-decoration: none;
   margin: $small-spacing;
@@ -469,7 +497,8 @@ $small-spacing: 10px;
 .title {
   color: #ff9c00;
   margin: $small-spacing;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Spartan', sans-serif;
+  font-weight: bold;
 }
 
 .topHeader {
@@ -481,7 +510,8 @@ $small-spacing: 10px;
 .text {
   color: #ffffff;
   text-align: center;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Spartan', sans-serif;
+  font-weight: bold;
 }
 
 .years {
@@ -494,6 +524,10 @@ $small-spacing: 10px;
   .about {
     padding: $small-spacing;
     justify-content: flex-start;
+  }
+
+  .burgerClosed {
+    right: 4%;
   }
 
   .contactInfo {
@@ -513,6 +547,11 @@ $small-spacing: 10px;
     margin: $small-spacing;
     padding: $small-spacing;
     width: 300px;
+    flex-direction: column;
+  }
+
+  .experienceCardHeader {
+    width: 100%;
   }
 
   .hamburgerMenu {
