@@ -11,8 +11,8 @@ class Experience extends Component {
         <div className="experienceCard">
           <div className="experienceCardHeader">
             <h2 className="position">Software Engineer</h2>
-            <div className="company">Grokker</div>
-            <div className="years">August 2018 - Present (2+ Years)</div>
+            <div className="experienceCardSubHeader">Grokker</div>
+            <div className="experienceCardSubHeader">August 2018 - Present (2+ Years)</div>
           </div>
           <div className='experineceCardText'>
             <ul>
@@ -26,8 +26,8 @@ class Experience extends Component {
         <div className="experienceCard">
           <div className="experienceCardHeader">
             <h2 className="position">Data Specialist</h2>
-            <div className="company">WE Communications, Microsoft</div>
-            <div className="years">October 2015 - November 2017 (2+ Years)</div>
+            <div className="experienceCardSubHeader">WE Communications, Microsoft</div>
+            <div className="experienceCardSubHeader">October 2015 - November 2017 (2+ Years)</div>
           </div>
           <div className='experineceCardText'>
             <ul>
@@ -40,8 +40,8 @@ class Experience extends Component {
         <div className="experienceCard">
           <div className="experienceCardHeader">
             <h2 className="position">Full Stack Web Engineer</h2>
-            <div className="company">Hackbright Academy</div>
-            <div className="years">March 2018 - May 2018</div>
+            <div className="experienceCardSubHeader">Hackbright Academy</div>
+            <div className="experienceCardSubHeader">March 2018 - May 2018</div>
           </div>
           <div className='experineceCardText'>
             <ul>
@@ -51,21 +51,23 @@ class Experience extends Component {
           </div>
         </div>
         <h3 id="projects" className="bigTitle">PROJECTS</h3>
-        <div className="experienceCard">
+        <div className="experienceCard"> 
           <h2 className="experienceCardHeader">Personal Site</h2>
           <div className='experineceCardText'>
             <p>This very site you are looking at now!</p>
             <p>Built with React, Node.js, Express.js, and SASS</p>
           </div>
         </div>
-        <div className="experienceCardHeader">
-          <h2 className="position center">Instagram Effect: 'Which Dragon are You?'</h2>
-        </div>
-        <video width="300" height="500" autoPlay loop >
-          <source src={wday} type="video/mp4"/>
-        </video>
-        <div className='experineceCardText'>
-          <p>Developed using Facebook's Spark AR Studio.</p>
+        <div className="experienceCard"> 
+          <div className="experienceCardHeader">
+            <h2 className="position center">Instagram Effect: 'Which Dragon are You?'</h2>
+            <div className='experineceCardSubHeader'>
+              <p>Developed using Facebook's Spark AR Studio.</p>
+            </div>
+          </div>
+          <video width="300" height="500" autoPlay loop >
+            <source src={wday} type="video/mp4"/>
+          </video>
         </div>
         <div className="experienceCard">
           <div className="experienceCardHeader">

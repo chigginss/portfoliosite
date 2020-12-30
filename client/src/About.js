@@ -23,13 +23,13 @@ class About extends Component {
     return (
       <div id="about" className="about">
           <div className="about">
-            <h1 className="title">Hi, I'm Cierra Higgins</h1>
+            <h1 className="hugeTitle">Hi, I'm Cierra Higgins</h1>
             <h2 className="title">Software Engineer with an English Degree.</h2>
             <p className="text">
               I'm an full stack software developer with 2+ years experience.
               Currently based in San Francisco, I work on web and mobile platforms.</p>
           </div>
-          <a className="resumeButton" download="resume" href="resume.pdf" target="_blank">Download Resume</a>
+          <a className="resumeButton" download="resume" href="resume.pdf" target="_blank">DOWNLOAD RESUME</a>
       </div>
     );
   }
