@@ -6,12 +6,16 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "bootstrap": "^4.5.3",
     "d3": "^6.2.0",
     "node-sass": "4.14.1",
     "react": "^16.14.0",
+    "react-bootstrap": "^1.4.0",
+    "react-bootstrap-tabs": "^2.0.0",
     "react-dom": "^16.14.0",
     "react-is": "^16.13.1",
     "react-scripts": "3.4.1",
+    "react-tabs": "^3.1.2",
     "styled-components": "^5.2.1"
   },
   "scripts": {
