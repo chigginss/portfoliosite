@@ -1,35 +1,62 @@
 import React, { Component } from 'react';
 import './portfolio.scss';
+import portrait from './portrait1.jpg';
 
 class About extends Component {
-
-  componentDidMount() {
-    if (typeof window !== "undefined") {
-      window.onscroll = () => {
-        let currentScrollPos = window.pageYOffset;
-        let maxScroll = document.body.scrollHeight - window.innerHeight;
-        // console.log(maxScroll)
-        if (currentScrollPos < 200 && currentScrollPos < maxScroll) {
-          this.setState({ opacity: '0' })
-          // console.log(currentScrollPos)
-        } else {
-          this.setState({ opacity: '1' })
-        }
-      }
-    }
-  }
 
   render() {
     return (
       <div id="about" className="about">
           <div className="about">
-            <h1 className="hugeTitle">Hi, I'm Cierra Higgins</h1>
-            <h2 className="title">Software Engineer with an English Degree.</h2>
-            <p className="text">
-              I'm an full stack software developer with 2+ years experience.
-              Currently based in San Francisco, I work on web and mobile platforms.</p>
+            <div className="aboutMeContainer">
+              <img className="image" src={portrait} alt="portrait" />
+              <div className="aboutMe">
+                <h2 className="title">I'm a bugcatcher</h2>
+                <p className="meText">
+                  I'm an full stack software developer with 2+ years experience.
+                  Currently based in San Francisco, I work on web and mobile platforms.
+                  Bulbasaur Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                </p>
+                <p className="meText">
+                  Ivysaur Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                  Venusaur Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                  Charmander Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                  Charmeleon Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </p>
+                <p className="meText">
+                  Ivysaur Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                  Venusaur Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                </p>
+                <div className="columnContainer">
+                  <div className="column">
+                    <div className="skillTitle">LANGUAGES</div>
+                    <div>JavaScript (ES6)</div>
+                    <div>HTML</div>
+                    <div>(S)CSS</div>
+                    <div>Python</div>
+                    <div>MongoDB</div>
+                    <div>PostGres</div>
+                  </div>
+                  <div className="column">
+                    <div className="skillTitle">FRAMEWORKS</div>
+                    <div>Node.js</div>
+                    <div>React</div>
+                    <div>React Native</div>
+                    <div>Jest</div>
+                    <div>Flask</div>
+                  </div>
+                  <div className="column">
+                    <div className="skillTitle">TOOLS</div>
+                    <div>Git / GitHub</div>
+                    <div>Linux</div>
+                    <div>Jira</div>
+                    <div>Confluence</div>
+                    <div>Jenkins</div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <a className="resumeButton" download="resume" href="resume.pdf" target="_blank">DOWNLOAD RESUME</a>
       </div>
     );
   }

@@ -10,9 +10,6 @@ class Header extends Component {
     return (
         <div className="headerContent">
           <div className='header'>
-            <div>
-              <img src={computer_graphic} className="headerGraphic" alt="computer"/>
-            </div>
             <div className="contactInfo">
               <a href="mailto:cierramhiggins@gmail.com"><img src={email} className="icon" alt="logo"/></a>
               <a href='https://github.com/chigginss'><img src={github_logo} className="icon" alt="logo"/></a>

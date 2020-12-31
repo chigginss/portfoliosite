@@ -1,30 +1,33 @@
-$navy-base: #0f0d25;
-$orange-base: #ff9c01;
-$navy: rgba($navy-base, 100);
-$orangee: rbga($orange-base, 100);
+$navy-base: #101D42;
+$light-base: #89D2DC;
+$purple-base: #6564DB;
 $small-spacing: 10px;
 // GOOGLE FONTS
 @import url('https://fonts.googleapis.com/css2?family=Arvo&family=Bungee&family=Josefin+Sans&family=Mukta:wght@200&family=Spartan:wght@200;570;600&family=Yanone+Kaffeesatz:wght@200&display=swap');
+@import "~bootstrap/scss/bootstrap";
 
 .about {
-  color: white;
+  color: $light-base;
   align-items: center;
-  background-color: $navy;
+  background-color: $navy-base;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 70px;
 }
 
 .hugeTitle {
-  color: #ff9c01;
-  font-size: 45px;
+  color: $light-base;
+  font-size: 72px;
   font-family: 'Spartan', sans-serif;
   font-weight: bold;
   text-align: center;
 }
 
 .bigTitle {
-  color: #ff9c01;
+  color: $light-base;
   font-size: 20px;
   font-family: 'Spartan', sans-serif;
   font-weight: bold;
@@ -53,7 +56,7 @@ $small-spacing: 10px;
   div {
     width: 2rem;
     height: 0.25rem;
-    background: $navy;
+    background: $navy-base;
     border-radius: 10px;
     transition: all 0.3s linear;
     position: relative;
@@ -72,6 +75,27 @@ $small-spacing: 10px;
       transform: rotate(-45deg);
     }
   }
+}
+
+.aboutMe {
+  text-align: left;
+  color: white;
+  max-width: 600px;
+  margin: 20px;
+}
+
+.columnContainer {
+  display: flex;
+  margin: $small-spacing;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 20px;
+  color: white;
+  font-size: 14px;
 }
 
 .closed {
@@ -117,11 +141,18 @@ $small-spacing: 10px;
   }
 }
 
+.headerLinks {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: $small-spacing;
+}
+
 .burgerClosed {
   position: fixed;
   top: 1%;
   right: 1%;
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: space-around;
   width: 2rem;
@@ -160,10 +191,22 @@ $small-spacing: 10px;
   }
 }
 
+.skillTitle {
+  font-family: 'Bungee', cursive;
+  color: $light-base;
+  margin: $small-spacing;
+}
+
+.meText {
+  color: white;
+  font-size: 14px;
+  margin: $small-spacing;
+}
+
 .burgerOpen {
   position: absolute;
   top: 5%;
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: space-around;
   width: 2rem;
@@ -180,7 +223,7 @@ $small-spacing: 10px;
   div {
     width: 2rem;
     height: 0.25rem;
-    background: $navy;
+    background: $navy-base;
     border-radius: 10px;
     transition: all 0.3s linear;
     position: relative;
@@ -220,7 +263,7 @@ $small-spacing: 10px;
     padding: 2rem 0;
     font-weight: bold;
     letter-spacing: 0.3rem;
-    color: $navy;
+    color: $navy-base;
     text-decoration: none;
     cursor: pointer;
     transition: color 0.3s linear;
@@ -230,7 +273,7 @@ $small-spacing: 10px;
     }
 
     &:hover {
-      color: $navy;
+      color: $navy-base;
     }
   }
 }
@@ -255,13 +298,13 @@ $small-spacing: 10px;
     padding: 2rem 0;
     font-weight: bold;
     letter-spacing: 0.3rem;
-    color: $navy;
+    color: $navy-base;
     text-decoration: none;
     cursor: pointer;
     transition: color 0.3s linear;
 
     &:hover {
-      color: $navy;
+      color: $navy-base;
     }
   }
 }
@@ -278,8 +321,7 @@ $small-spacing: 10px;
 }
 
 .content {
-  align-items: center;
-  background-color: $navy;
+  background-color: $navy-base;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -289,7 +331,7 @@ $small-spacing: 10px;
 
 .contact {
   align-items: center;
-  background-color: $navy;
+  background-color: $navy-base;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -329,10 +371,10 @@ $small-spacing: 10px;
 
 .experienceCard {
   padding: $small-spacing;
-  width: 600px;
-  margin: $small-spacing;
+  margin: 40px;
+  max-width: 900px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   text-align: center; 
   border-radius: $small-spacing;
 }
@@ -353,21 +395,33 @@ $small-spacing: 10px;
 }
 
 .experienceCardHeader {
-  background-color: white;
-  color: $orange-base;
+  color: $light-base;
   text-align: left;
   font-family: 'Spartan', sans-serif;
-  padding: 20px;
-  width: 120px;
+  padding-top: $small-spacing;
+  padding-left: $small-spacing;
+}
+
+.experienceCardSubHead {
+  display: flex;
+  justify-content: space-between;
+  margin: $small-spacing;
 }
 
 .experienceCardSubHeader {
-  color: $orange-base;
-  font-size: 14px;
+  color: $light-base;
+  font-size: 18px;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $navy-base;
 }
 
 .footerText {
-  color: #ff9c01;
+  color: $light-base;
   display: flex;
   padding: $small-spacing;
   font-style: italic;
@@ -381,7 +435,7 @@ $small-spacing: 10px;
 
 .header {
   align-items: center;
-  background-color: $navy;
+  background-color: $navy-base;
   color: white;
   display: flex;
   flex-direction: column;
@@ -394,7 +448,7 @@ $small-spacing: 10px;
 }
 
 .headerName {
-  color: $orange-base;
+  color: $light-base;
   font-size: 18px;
   padding-left: 20px;
   font-family: 'Bungee', cursive;
@@ -402,7 +456,8 @@ $small-spacing: 10px;
 
 .headerBar {
   display: flex;
-  background-color: $navy;
+  background-color: $navy-base;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
   height: 50px;
@@ -412,7 +467,7 @@ $small-spacing: 10px;
 }
 
 .headerContent {
-  background-color: $navy;
+  background-color: $navy-base;
   display: flex;
   color: white;
   flex-direction: column;
@@ -426,26 +481,21 @@ $small-spacing: 10px;
 }
 
 .headerLink {
-  color: white;
-  text-decoration: none;
-}
-
-.image {
-  max-width: 800px;
-  max-height: 600px;
-}
-
-.imagesContainer {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  max-width: 600px;
+  color: $purple-base;
+  cursor: pointer;
+  margin: 30px;
+  font-size: 18px;
+  
+  &:hover {
+    color: white;
+    text-decoration: none;
+  }
 }
 
 .icon {
   margin: 20px;
-  height: 30px;
-  width: 30px;
+  height: 40px;
+  width: 40px;
 }
 
 .logo {
@@ -458,19 +508,19 @@ $small-spacing: 10px;
 }
 
 .position {
-  color: $orangee;
+  color: $light-base;
   font-weight: bold;
 }
 
 .portfolioHome {
   display: flex;
   flex-direction: column;
-  background-color: $navy;
+  background-color: $navy-base;
 }
 
 .resumeButton {
-  color: #ff9c01;
-  border: 1px solid #ff9c01;
+  color: $purple-base;
+  border: 1px solid $purple-base;
   border-radius: $small-spacing;
   font-size: 18px;
   font-family: 'Bungee', cursive;
@@ -481,6 +531,7 @@ $small-spacing: 10px;
 
 .resumeButton:hover {
   background-color: #ffffff;
+  text-decoration: none;
 }
 
 .resumeText {
@@ -494,8 +545,20 @@ $small-spacing: 10px;
   min-width: 60px;
 }
 
+.aboutMeContainer {
+  display: flex;
+}
+
+.image {
+  max-height: 300px;
+  max-width: 300px;
+  opacity: 1;
+  border: 1px solid white;
+  border-radius: 2px;
+}
+
 .title {
-  color: #ff9c00;
+  color: $light-base;
   margin: $small-spacing;
   font-family: 'Spartan', sans-serif;
   font-weight: bold;
@@ -512,6 +575,8 @@ $small-spacing: 10px;
   text-align: center;
   font-family: 'Spartan', sans-serif;
   font-weight: bold;
+  font-size: 20px;
+  width: 600px;
 }
 
 .years {
@@ -521,13 +586,40 @@ $small-spacing: 10px;
 
 @media (max-width: 600px) {
 
+  .hugeTitle {
+    font-size: 30px;
+  }
+
+  .content {
+    max-width: 600px;
+  }
+
+  .text {
+    width: 100%;
+  }
+
+  .columnContainer {
+    flex-direction: column;
+  }
+
+  .aboutMeContainer {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 400px;
+  }
+
   .about {
     padding: $small-spacing;
-    justify-content: flex-start;
   }
 
   .burgerClosed {
     right: 4%;
+    display: flex;
+  }
+
+  .burgerOpen {
+    display: flex;
   }
 
   .contactInfo {
@@ -554,9 +646,34 @@ $small-spacing: 10px;
     width: 100%;
   }
 
+  .headerLinks {
+    display: none;
+  }
+
+  .experienceCardHeader {
+    text-align: center;
+  }
+
+  .experienceCardSubHead {
+    flex-direction: column;
+  }
+
   .hamburgerMenu {
     display: flex;
     justify-content: flex-end;
-    background-color: $navy;
+    background-color: $navy-base;
+  }
+
+  .hide {
+    max-width: 300px;
+  }
+
+  .aboutMe {
+    max-width: 600%;
+    width: 100%;
+  }
+
+  .header {
+    flex-direction: column;
   }
 }
