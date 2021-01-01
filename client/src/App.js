@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 import './portfolio.scss';
 import About from './About.js';
-import Contact from './Contact.js';
 import Experience from './Experience.js';
 import Header from './Header.js';
-import BarChart from './BarChart.js';
-import Menu from './menu.js';
+import SideBar from './SideBar.js';
 import Footer from './Footer.js';
 import Welcome from './Welcome.js';
+import styled from 'styled-components'
 
 class App extends Component {
 
@@ -15,11 +14,10 @@ class App extends Component {
     super(props);
     this.state = {
       data: null,
-      open: false,
       showFooter: false,
-      burger: 'burgerClosed',
-      menu: 'menuClosed',
-      apiResponse: 'YEY'
+      opacity: '0',
+      apiResponse: 'YEY',
+      hideChev: false
     };
   }
 
@@ -33,14 +31,6 @@ class App extends Component {
       this.callAPI();
   }
 
-  handleClick() {
-    this.setState(prevState => ({
-      open: !prevState.open,
-      burger: !prevState.open ? 'burgerOpen' : 'burgerClosed',
-      menu: !prevState.open ? 'menuOpen' : 'menuClosed'
-    }));
-  }
-
   componentDidMount() {
     if (typeof window !== "undefined") {
       window.onscroll = () => {
@@ -48,10 +38,10 @@ class App extends Component {
         let maxScroll = document.body.scrollHeight - window.innerHeight;
         // console.log(maxScroll)
         if (currentScrollPos < 200 && currentScrollPos < maxScroll) {
-          this.setState({ opacity: '0' })
+          this.setState({ opacity: '0', hideChev: 'block' })
           // console.log(currentScrollPos)
         } else {
-          this.setState({ opacity: '1' })
+          this.setState({ opacity: '1', hideChev: 'none' })
         }
 
         if (currentScrollPos === maxScroll) {
@@ -62,42 +52,81 @@ class App extends Component {
   }
 
   render() {
+
+    const StyledButton = styled.a`
+        color: #6564DB;
+        background-color: transparent;
+        border: 1px solid #6564DB;
+        border-radius: 10px;
+        font-size: 18px;
+        font-family: 'Bungee', cursive;
+        padding: 10px;
+        text-decoration: none;
+        margin: 10px;
+
+
+        :hover {
+            background-color: #ffffff;
+            text-decoration: none
+        }
+    `;
+
+    const ScrollDown = styled.span`    
+        color: #6564DB;
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        border-left: 1px solid #fff;
+        border-bottom: 1px solid #fff;
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        -webkit-animation: sdb04 2s infinite;
+        animation: sdb04 2s infinite;
+        box-sizing: border-box;
+        @-webkit-keyframes sdb04 {
+            0% {
+                -webkit-transform: rotate(-45deg) translate(0, 0);
+            }
+            20% {
+                -webkit-transform: rotate(-45deg) translate(-10px, 10px);
+            }
+            40% {
+                -webkit-transform: rotate(-45deg) translate(0, 0);
+            }
+        }
+
+        @keyframes sdb04 {
+            0% {
+                transform: rotate(-45deg) translate(0, 0);
+            }
+            20% {
+                transform: rotate(-45deg) translate(-10px, 10px);
+            }
+            40% {
+                transform: rotate(-45deg) translate(0, 0);
+            }
+        }
+    `;
+
     return (
         <div>
             <div className="content">
-                <div className="headerBar">
-                    <div className="headerContainer">
-                        <div className="headerName">CIERRA HIGGINS</div>
-                    </div>
-                    <div className="headerLinks">
-                        <a href="#about" className="headerLink">About</a>
-                        <a href="#experience" className="headerLink">Experience</a>
-                        <a href="#projects" className="headerLink">Projects</a>
-                        <a href="#contact" className="headerLink">Contact</a>
-                    </div>
-                    <div className={this.state.burger} onClick={() => this.handleClick()}>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </div>
-                    <div className={this.state.menu}>
-                        <a href="#about" onClick={() => this.handleClick()}>About</a>
-                        <a href="#experience" onClick={() => this.handleClick()}>Experience</a>
-                        <a href="#projects" onClick={() => this.handleClick()}>Projects</a>
-                        <a href="#contact" onClick={() => this.handleClick()}>Contact</a>
-                    </div>
-                </div>
+                <Header/>
                 <div className="about">
-                    <Header/>
+                    <SideBar/>
                     <Welcome/>
+                    <a href="#about" style={{ display: `${this.state.hideChev}`}}>
+                        <ScrollDown/>
+                    </a>
                     <div className="hide" style={{ opacity: `${this.state.opacity}`}}>
                         <About/>
+                        <StyledButton download="resume" href="resume.pdf" target="_blank">DOWNLOAD RESUME</StyledButton>
                         <Experience/>
                     </div>
                     <div className="contact" id="contact">
                         <h1 className="title">Let's Chat!</h1>
                         <div className="text">I'm currently not looking for work, but I would love to connect.</div>
-                        <a className="resumeButton" href="mailto:cierramhiggins@gmail.com">Contact Me</a>
+                        <StyledButton href="mailto:cierramhiggins@gmail.com">CONTACT ME</StyledButton>
                     </div>
                 </div>
                 <div className="footer">

@@ -1,21 +1,48 @@
 import React, { Component } from 'react';
-import computer_graphic from './images/computer_logo.jpeg';
-import email from './images/gmail_35.png';
-import github_logo from './images/github_35.png';
-import linkedin_logo from './images/linkedin_35.png';
 import './portfolio.scss';
 
 class Header extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      open: false,
+      burger: 'burgerClosed',
+      menu: 'menuClosed',
+    };
+  }
+
+  handleClick() {
+    this.setState(prevState => ({
+      open: !prevState.open,
+      burger: !prevState.open ? 'burgerOpen' : 'burgerClosed',
+      menu: !prevState.open ? 'menuOpen' : 'menuClosed'
+    }));
+  }
+
   render() {
     return (
-        <div className="headerContent">
-          <div className='header'>
-            <div className="contactInfo">
-              <a href="mailto:cierramhiggins@gmail.com"><img src={email} className="icon" alt="logo"/></a>
-              <a href='https://github.com/chigginss'><img src={github_logo} className="icon" alt="logo"/></a>
-              <a href='https://www.linkedin.com/in/cierra-m-higgins/'><img src={linkedin_logo} className="icon" alt="logo" /></a>
+       <div className="headerBar">
+            <div className="headerContainer">
+                <div className="headerName">CIERRA HIGGINS</div>
             </div>
-          </div>
+            <div className="headerLinks">
+                <a href="#about" className="headerLink">About</a>
+                <a href="#experience" className="headerLink">Experience</a>
+                <a href="#projects" className="headerLink">Projects</a>
+                <a href="#contact" className="headerLink">Contact</a>
+            </div>
+            <div className={this.state.burger} onClick={() => this.handleClick()}>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div className={this.state.menu}>
+                <a href="#about" onClick={() => this.handleClick()}>About</a>
+                <a href="#experience" onClick={() => this.handleClick()}>Experience</a>
+                <a href="#projects" onClick={() => this.handleClick()}>Projects</a>
+                <a href="#contact" onClick={() => this.handleClick()}>Contact</a>
+            </div>
         </div>
     );
   }
