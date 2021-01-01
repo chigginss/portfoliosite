@@ -29,7 +29,6 @@ class Welcome extends Component {
               I'm an full stack software developer with 2+ years experience.
               Currently based in San Francisco, I work on web and mobile platforms.</p>
           </div>
-          <a className="resumeButton" download="resume" href="resume.pdf" target="_blank">DOWNLOAD RESUME</a>
       </div>
     );
   }
