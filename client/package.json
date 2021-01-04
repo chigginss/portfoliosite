@@ -21,8 +21,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "eject": "react-scripts eject",
-    "test": "jest"
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -40,7 +40,5 @@
     ]
   },
   "proxy": "http://localhost:127.0.0.1/",
-  "devDependencies": {
-    "jest": "^26.6.3"
-  }
+  "devDependencies": {}
 }

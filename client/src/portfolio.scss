@@ -6,7 +6,7 @@ $small-spacing: 10px;
 @import url('https://fonts.googleapis.com/css2?family=Arvo&family=Bungee&family=Josefin+Sans&family=Mukta:wght@200&family=Spartan:wght@200;570;600&family=Yanone+Kaffeesatz:wght@200&display=swap');
 @import "~bootstrap/scss/bootstrap";
 
-.about {
+.mainSection {
   color: $light-base;
   align-items: center;
   background-color: $navy-base;
@@ -15,11 +15,45 @@ $small-spacing: 10px;
   align-items: center;
   justify-content: center;
   text-align: center;
-  margin-top: 70px;
+  margin-top: 100px;
+}
+
+.about {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.welcome {
+  color: $light-base;
+  align-items: center;
+  background-color: $navy-base;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.welcomeText {
+  margin-top: 200px;
+  z-index: 9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .hide {
   margin-top: 30px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .hugeTitle {
@@ -85,7 +119,7 @@ $small-spacing: 10px;
   text-align: left;
   color: white;
   max-width: 600px;
-  margin: 20px;
+  margin-left: 20px;
 }
 
 .columnContainer {
@@ -195,6 +229,55 @@ $small-spacing: 10px;
   }
 }
 
+.projects {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.projectTitle {
+  margin: 20px;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Spartan', sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.projectText {
+  font-size: 18px;
+  margin-left: 20px;
+  margin-right: 20px;
+  text-align: left;
+  background-color: $light-base;
+  padding: $small-spacing;
+  width: 600px;
+}
+
+.projectCardBottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: $small-spacing;
+}
+
+.projectCardText {
+  color: white;
+  font-family: 'Spartan', sans-serif;
+  text-align: left;
+  font-size: calc($small-spacing + 2vmin);
+  min-width: 400px;
+  z-index: 1;
+}
+
+.projectCardContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 10px;
+  padding: 10px;
+}
+
 .skillTitle {
   font-family: 'Bungee', cursive;
   color: $light-base;
@@ -203,13 +286,15 @@ $small-spacing: 10px;
 
 .meText {
   color: white;
-  font-size: 14px;
+  font-size: 18px;
+  width: 100%;
   margin: $small-spacing;
 }
 
 .burgerOpen {
   position: absolute;
-  top: 5%;
+  top: 10%;
+  right: 0;
   display: none;
   flex-direction: column;
   justify-content: space-around;
@@ -233,18 +318,19 @@ $small-spacing: 10px;
     position: relative;
     transform-origin: 1px;
 
-    :first-child {
-      transform: rotate(45deg);
-    }
+  }
 
-    :nth-child(2) {
-      opacity: '0';
-      transform: translateX(20px);
-    }
+  :first-child {
+    transform: rotate(45deg);
+  }
 
-    :nth-child(3) {
-      transform: rotate(-45deg);
-    }
+  :nth-child(2) {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+
+  :nth-child(3) {
+    transform: rotate(-45deg);
   }
 }
 
@@ -329,8 +415,10 @@ $small-spacing: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   font-family: 'Spartan', sans-serif;
   font-weight: 570;
+  width: 100%;
 }
 
 .contact {
@@ -355,8 +443,7 @@ $small-spacing: 10px;
   display: flex;
   flex-direction: column;
   position: fixed;
-  width: 100%;
-  
+  width: 100%;  
 }
 
 .dropdownMenu {
@@ -375,11 +462,10 @@ $small-spacing: 10px;
 
 .experienceCard {
   padding: $small-spacing;
-  margin: 40px;
-  max-width: 900px;
+  max-width: 500px;
   display: flex;
   flex-direction: column;
-  text-align: center; 
+  text-align: left; 
   border-radius: $small-spacing;
 }
 
@@ -399,7 +485,7 @@ $small-spacing: 10px;
 }
 
 .experienceCardHeader {
-  color: $light-base;
+  color: white;
   text-align: left;
   font-family: 'Spartan', sans-serif;
   padding-top: $small-spacing;
@@ -413,14 +499,24 @@ $small-spacing: 10px;
 }
 
 .experienceCardSubHeader {
-  color: $light-base;
+  color: white;
   font-size: 18px;
+}
+
+.scrollDown {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: $navy-base;
+  margin-top: 72px;
 }
 
 .footer {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
   background-color: $navy-base;
 }
 
@@ -439,7 +535,6 @@ $small-spacing: 10px;
 
 .header {
   align-items: center;
-  background-color: $navy-base;
   color: white;
   display: flex;
   flex-direction: column;
@@ -471,7 +566,6 @@ $small-spacing: 10px;
 }
 
 .headerContent {
-  background-color: $navy-base;
   display: flex;
   color: white;
   flex-direction: column;
@@ -482,6 +576,7 @@ $small-spacing: 10px;
   font-family: 'Spartan', sans-serif;
   text-align: center;
   margin: 0px;
+  z-index: 9;
 }
 
 .headerLink {
@@ -496,10 +591,19 @@ $small-spacing: 10px;
   }
 }
 
+.link {
+  color: $purple-base;
+  cursor: pointer;
+  
+  &:hover {
+    color: white;
+    text-decoration: none;
+  }
+}
+
 .icon {
   margin: 20px;
-  height: 40px;
-  width: 40px;
+  max-width: 30px;
 }
 
 .logo {
@@ -512,8 +616,9 @@ $small-spacing: 10px;
 }
 
 .position {
-  color: $light-base;
+  color: white;
   font-weight: bold;
+  font-size: 24px;
 }
 
 .portfolioHome {
@@ -553,13 +658,27 @@ $small-spacing: 10px;
   display: flex;
 }
 
+.sectionHeader {
+  width: 75%;
+  text-align: left;
+  border-bottom: 1px solid white;
+}
+
 .image {
-  max-height: 300px;
-  max-width: 300px;
-  opacity: 1;
+  max-width: 25%;
+  max-height: 25%;
+  opacity: .5;
   border: 1px solid white;
   border-radius: 2px;
 }
+
+.portrait {
+  max-width: 300px;
+  max-height: 300px;
+  border: 1px solid white;
+  border-radius: 2px;
+}
+
 
 .title {
   color: $light-base;
@@ -588,14 +707,120 @@ $small-spacing: 10px;
   font-style: italic;
 }
 
+.active {
+  display: flex;
+}
+
+.hidden {
+  display: none;
+}
+
+.tabButton {
+  background-color: $navy-base;
+  color: $purple-base;
+  font-weight: bold;
+  text-align: left;
+  font-size: 25px;
+  font-family: 'Spartan', cursive;
+  border: none;
+  padding: 10px;
+  width: 100%;
+
+  &:hover {
+    color: $white;
+    background-color: $purple-base;
+  }
+}
+
+.activeTabButton {
+  background-color: $purple-base;
+  color: $white;
+  font-weight: bold;
+  text-align: left;
+  font-size: 25px;
+  font-family: 'Spartan', cursive;
+  border: none;
+  padding: 10px;
+  width: 100%;
+
+  &:hover {
+    color: $white;
+    background-color: $purple-base;
+  }
+}
+
+.tabs {
+  background-color: white;
+  align-items: flex-start;
+  flex-direction: column;
+  display: flex;
+  justify-content: flex-start;
+  text-align: left;
+  max-width: 300px;
+  min-width: 200px;
+}
+
+.tabsContainer {
+  margin: 40px;
+  align-items: center;
+  flex-direction: row;
+  display: flex;
+  border-radius: 10px;
+  padding: $small-spacing
+}
+
 @media (max-width: 600px) {
+
+  .projects {
+    width: 300px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .image {
+    display: none;
+  }
+
+  .video {
+    display: none;
+  }
+
+  .projectTitle {
+    font-size: 16px;
+    max-width: 200px;
+    margin-left: $small_spacing;
+  }
+
+  .projectText {
+    width: 250px;
+    text-align: left;
+  }
+
+  .projectCardContainer {
+    flex-direction: column;
+    text-align: center;
+    width: 300px;
+  }
+
+  .projectText {
+    width: 300px;
+    margin: $small-spacing;
+  }
+
+  .projectTextContainer {
+    text-align: center;
+  }
+
+  .projectCardBottom {
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+  }
 
   .hugeTitle {
     font-size: 30px;
-  }
-
-  .content {
-    max-width: 600px;
+    z-index: 9;
+    position: relative;
   }
 
   .text {
@@ -610,15 +835,22 @@ $small-spacing: 10px;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    max-width: 400px;
   }
 
   .about {
     padding: $small-spacing;
   }
 
+  .content {
+    width: 600px;
+  }
+
+  .mainSection {
+    width: 550px;
+  }
+
   .burgerClosed {
-    right: 4%;
+    right: 4px;
     display: flex;
   }
 
@@ -643,6 +875,7 @@ $small-spacing: 10px;
     margin: $small-spacing;
     padding: $small-spacing;
     width: 300px;
+    height: 300px;
     flex-direction: column;
   }
 
@@ -662,19 +895,35 @@ $small-spacing: 10px;
     flex-direction: column;
   }
 
+  .welcomeText {
+    margin-top: 300px;
+  }
+
   .hamburgerMenu {
     display: flex;
     justify-content: flex-end;
     background-color: $navy-base;
   }
 
+  .skillTitle {
+    width: 200px;
+  }
+
   .hide {
-    margin: 40px;
-    max-width: 300px;
+    margin-top: 0px;
   }
 
   .aboutMe {
-    max-width: 600%;
+    width: 100%;
+  }
+
+  .tabsContainer {
+    flex-direction: column;
+  }
+
+  .tabs {
+    justify-content: center;
+    align-items: center;
     width: 100%;
   }
 

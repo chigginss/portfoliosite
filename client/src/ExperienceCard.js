@@ -10,11 +10,8 @@ class ExperienceCard extends Component {
         )
         return (
             <div className="experienceCard">
-                <div className="experienceCardHeader">
-                    <h2 className="position">{this.props.position}</h2>
-                </div>
+                <h2 className="position">{this.props.position}</h2>
                 <div className="experienceCardSubHead">
-                    <div className="experienceCardSubHeader">{this.props.company}</div>
                     <div className="experienceCardSubHeader">{this.props.date}</div>
                 </div>
                 <div className='experineceCardText'>
