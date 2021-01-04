@@ -2,6 +2,7 @@ import React, { Component, useState } from 'react';
 // components
 import About from './About.js';
 import Experience from './Experience.js';
+import Projects from './Projects.js';
 import Welcome from './Welcome.js';
 // images and scss
 import styled from 'styled-components'
@@ -62,49 +63,13 @@ class App extends Component {
         font-family: 'Bungee', cursive;
         padding: 10px;
         text-decoration: none;
-        margin: 10px;
+        margin: 40px;
 
 
         :hover {
-            background-color: #ffffff;
+            background-color: #6564DB;
+            color: #ffffff;
             text-decoration: none
-        }
-    `;
-
-    const ScrollDown = styled.span`    
-        color: #6564DB;
-        position: absolute;
-        width: 24px;
-        height: 24px;
-        border-left: 3px solid #fff;
-        border-bottom: 3px solid #fff;
-        -webkit-transform: rotate(-45deg);
-        transform: rotate(-45deg);
-        -webkit-animation: sdb04 2s infinite;
-        animation: sdb04 2s infinite;
-        box-sizing: border-box;
-        @-webkit-keyframes sdb04 {
-            0% {
-                -webkit-transform: rotate(-45deg) translate(0, 0);
-            }
-            20% {
-                -webkit-transform: rotate(-45deg) translate(-10px, 10px);
-            }
-            40% {
-                -webkit-transform: rotate(-45deg) translate(0, 0);
-            }
-        }
-
-        @keyframes sdb04 {
-            0% {
-                transform: rotate(-45deg) translate(0, 0);
-            }
-            20% {
-                transform: rotate(-45deg) translate(-10px, 10px);
-            }
-            40% {
-                transform: rotate(-45deg) translate(0, 0);
-            }
         }
     `;
 
@@ -112,20 +77,20 @@ class App extends Component {
         <div>
             <div className="content">
                 <Header/>
-                <div className="about">
-                    <SideBar/>
-                    <Welcome/>
-                    <div className="scrollDown">
-                        <a href="#about" style={{ display: `${this.state.hideChev}`}}>
-                            <ScrollDown/>
-                        </a>
+                <SideBar />
+                <Welcome hideChev={this.state.hideChev} />
+                <div className="mainSection" style={{ opacity: `${this.state.opacity}`}}>
+                    <div className="sectionHeader">1. About</div>
+                    <About/>
+                    <div id="experience"  className="sectionHeader">2. Experience</div>
+                    <div className="experience">
+                      <Experience/>
                     </div>
-                    <div className="hide" style={{ opacity: `${this.state.opacity}`}}>
-                        <About/>
-                        <StyledButton download="resume" href="resume.pdf" target="_blank">DOWNLOAD RESUME</StyledButton>
-                        <Experience/>
-                    </div>
-                    <div className="contact" id="contact">
+                    <StyledButton download="resume" href="resume.pdf" target="_blank">DOWNLOAD RESUME</StyledButton>
+                    <div id="projects" className="sectionHeader">3. Projects</div>
+                    <Projects />
+                    <div id="contact" className="sectionHeader">4. CONTACT</div>
+                    <div className="contact">
                         <h1 className="title">Let's Chat!</h1>
                         <div className="text">I'm currently not looking for work, but I would love to connect.</div>
                         <StyledButton href="mailto:cierramhiggins@gmail.com">CONTACT ME</StyledButton>
@@ -181,9 +146,13 @@ function Header() {
 }
 
 function SideBar() {
+  
     return (
         <div className="headerContent">
           <div className='header'>
+            <span class="star-one"></span>
+            <span class="star-two"></span>
+            <div class="moon"></div>
             <div className="contactInfo">
               <a href="mailto:cierramhiggins@gmail.com"><img src={email} className="icon" alt="logo"/></a>
               <a href='https://github.com/chigginss'><img src={github_logo} className="icon" alt="logo"/></a>
