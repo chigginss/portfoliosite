@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './welcomeart.scss';
 
-class Welcome extends Component {
+class WelcomeArt extends Component {
 
   render() {
     return (       
@@ -59,4 +59,4 @@ class Welcome extends Component {
   }
 }
 
-export default Welcome;
+export default WelcomeArt;

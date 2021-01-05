@@ -41,9 +41,9 @@ class Projects extends Component {
               <h2 className="projectTitle">
                 Newsflash
               </h2>
-              <p className="projectText">My Final Project for HackBright Academy in 2018. Newsflash displays the most popular news breaking right now in a D3.js visual.</p>
+              <p className="projectText">A web app that displays trending news in a D3.js visual that provides context for bias and popularity of the news outlet. Users can create accounts, create a list of favorite topics and share results.</p>
               <div className="projectCardBottom">
-                <p className="skillTitle">Python jQuery D3.js AJAX HTML CSS Bootstrap Jinja2</p>
+                <p className="skillTitle">Python jQuery D3.js AJAX PostGres HTML CSS Bootstrap Jinja2</p>
                 <a href='https://github.com/chigginss/Newsflash'><img src={github_logo} className="icon" alt="logo"/></a>
               </div>
             </div>

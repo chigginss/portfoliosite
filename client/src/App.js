@@ -1,9 +1,11 @@
 import React, { Component, useState } from 'react';
 // components
 import About from './About.js';
+import Divider from './Divider.js';
 import Experience from './Experience.js';
 import Projects from './Projects.js';
 import Welcome from './Welcome.js';
+import FooterArt from './FooterArt.js';
 // images and scss
 import styled from 'styled-components'
 import email from './images/gmail_35.png';
@@ -67,7 +69,7 @@ class App extends Component {
 
 
         :hover {
-            background-color: #6564DB;
+            background-color: rgb(23, 41, 90);
             color: #ffffff;
             text-decoration: none
         }
@@ -77,43 +79,30 @@ class App extends Component {
         <div>
             <div className="content">
                 <Header/>
-                <SideBar />
+                <div style={{ opacity: this.state.showFooter ? '0' : '1'}}>
+                  <SideBar />
+                </div>
                 <Welcome hideChev={this.state.hideChev} />
                 <div className="mainSection" style={{ opacity: `${this.state.opacity}`}}>
-                    <div className="sectionHeader">1. About</div>
+                    <Divider text={'ABOUT'}/>
                     <About/>
-                    <div id="experience"  className="sectionHeader">2. Experience</div>
-                    <div className="experience">
-                      <Experience/>
-                    </div>
+                    <Divider text={'EXPERIENCE'}/>
+                    <Experience/>
                     <StyledButton download="resume" href="resume.pdf" target="_blank">DOWNLOAD RESUME</StyledButton>
-                    <div id="projects" className="sectionHeader">3. Projects</div>
+                    <Divider text={'PROJECTS'}/>
                     <Projects />
-                    <div id="contact" className="sectionHeader">4. CONTACT</div>
+                    <Divider text={'CONTACT'}/>
                     <div className="contact">
                         <h1 className="title">Let's Chat!</h1>
                         <div className="text">I'm currently not looking for work, but I would love to connect.</div>
                         <StyledButton href="mailto:cierramhiggins@gmail.com">CONTACT ME</StyledButton>
                     </div>
                 </div>
-                <Footer/>
+                <FooterArt />
             </div>
         </div>
     );
   }
-}
-
-function Footer() {
-    return (
-        <div>
-            <div className="footer">
-                <a href="mailto:cierramhiggins@gmail.com"><img src={email} className="icon" alt="logo"/></a>
-                <a href='https://github.com/chigginss'><img src={github_logo} className="icon" alt="logo"/></a>
-                <a href='https://www.linkedin.com/in/cierra-m-higgins/'><img src={linkedin_logo} className="icon" alt="logo" /></a>
-            </div>
-            <div className="footerText">Designed and built by Cierra Higgins</div>
-        </div>
-    );
 }
 
 function Header() {
@@ -150,9 +139,6 @@ function SideBar() {
     return (
         <div className="headerContent">
           <div className='header'>
-            <span class="star-one"></span>
-            <span class="star-two"></span>
-            <div class="moon"></div>
             <div className="contactInfo">
               <a href="mailto:cierramhiggins@gmail.com"><img src={email} className="icon" alt="logo"/></a>
               <a href='https://github.com/chigginss'><img src={github_logo} className="icon" alt="logo"/></a>
