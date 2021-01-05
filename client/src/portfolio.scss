@@ -1,4 +1,5 @@
 $navy-base: #101D42;
+$light-navy-base: rgb(23, 41, 90);
 $light-base: #89D2DC;
 $purple-base: #6564DB;
 $small-spacing: 10px;
@@ -24,6 +25,13 @@ $small-spacing: 10px;
   flex-direction: column;
   align-items: center;
   margin-top: 20px;
+}
+
+.divider {
+  width: 100%;
+  background-color: white;
+  margin-bottom: 72px;
+  margin-top: 72px;
 }
 
 .welcome {
@@ -249,8 +257,9 @@ $small-spacing: 10px;
   margin-left: 20px;
   margin-right: 20px;
   text-align: left;
-  background-color: $light-base;
-  padding: $small-spacing;
+  background-color: $light-navy-base;
+  border-radius: 3px;
+  padding: 20px;
   width: 600px;
 }
 
@@ -258,7 +267,6 @@ $small-spacing: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-left: $small-spacing;
 }
 
 .projectCardText {
@@ -281,7 +289,8 @@ $small-spacing: 10px;
 .skillTitle {
   font-family: 'Bungee', cursive;
   color: $light-base;
-  margin: $small-spacing;
+  margin: 20px;
+  max-width: 300px;
 }
 
 .meText {
@@ -524,9 +533,40 @@ $small-spacing: 10px;
   color: $light-base;
   display: flex;
   padding: $small-spacing;
-  font-style: italic;
   flex-direction: row;
   justify-content: center;
+  font-family: 'Bungee', cursive;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.footerArt {
+  width: 100%;
+  height: 100%;
+
+  .star-footer {
+    height: 3px;
+    width: 3px;
+    background-color: white;
+    margin-top: 20px;
+    right: 190px;
+    -webkit-animation: twinkle 2.1s linear infinite;
+    -moz-animation: twinkle 2.1s linear infinite;
+    -o-animation: twinkle 2.1s linear infinite;
+    animation: twinkle 2.1s linear infinite;
+  }
+  
+  .moon {
+    width: 30px;
+    height: 30px;
+    background: rgb(73, 66, 66);
+    border-radius: 50%;
+    border-bottom:3px solid #d8d3c8;
+    border-right:3px solid #d8d3c8;
+    right: 250px;
+  }
 }
 
 .hamburgerMenu {
@@ -576,27 +616,27 @@ $small-spacing: 10px;
   font-family: 'Spartan', sans-serif;
   text-align: center;
   margin: 0px;
-  z-index: 9;
+  z-index: 89999;
 }
 
 .headerLink {
-  color: $purple-base;
+  color: white;
   cursor: pointer;
   margin: 30px;
   font-size: 18px;
   
   &:hover {
-    color: white;
+    color: $purple-base;
     text-decoration: none;
   }
 }
 
 .link {
-  color: $purple-base;
+  color: white;
   cursor: pointer;
   
   &:hover {
-    color: white;
+    color: $purple-base;
     text-decoration: none;
   }
 }
@@ -659,9 +699,11 @@ $small-spacing: 10px;
 }
 
 .sectionHeader {
-  width: 75%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 65%;
   text-align: left;
-  border-bottom: 1px solid white;
 }
 
 .image {
@@ -717,6 +759,23 @@ $small-spacing: 10px;
 
 .tabButton {
   background-color: $navy-base;
+  color: white;
+  font-weight: bold;
+  text-align: left;
+  font-size: 25px;
+  font-family: 'Spartan', cursive;
+  border: none;
+  padding: 10px;
+  width: 100%;
+
+  &:hover {
+    color: $purple-base;
+    background-color: $light-navy-base;
+  }
+}
+
+.activeTabButton {
+  background-color: $light-navy-base;
   color: $purple-base;
   font-weight: bold;
   text-align: left;
@@ -728,24 +787,7 @@ $small-spacing: 10px;
 
   &:hover {
     color: $white;
-    background-color: $purple-base;
-  }
-}
-
-.activeTabButton {
-  background-color: $purple-base;
-  color: $white;
-  font-weight: bold;
-  text-align: left;
-  font-size: 25px;
-  font-family: 'Spartan', cursive;
-  border: none;
-  padding: 10px;
-  width: 100%;
-
-  &:hover {
-    color: $white;
-    background-color: $purple-base;
+    background-color: $light-navy-base;
   }
 }
 
@@ -782,6 +824,10 @@ $small-spacing: 10px;
   }
 
   .video {
+    display: none;
+  }
+
+  .moon {
     display: none;
   }
 
