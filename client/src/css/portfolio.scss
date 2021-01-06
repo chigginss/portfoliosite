@@ -1,203 +1,955 @@
+// GOOGLE FONTS
+@import url('https://fonts.googleapis.com/css2?family=Arvo&family=Bungee&family=Josefin+Sans&family=Mukta:wght@200&family=Spartan:wght@200;570;600&family=Yanone+Kaffeesatz:wght@200&display=swap');
+// COLORS
+$light-base: #89D2DC;
+$light-navy-base: #17295A;
+$navy-base: #101D42;
+$purple-base: #6564DB;
+$white: #FFFFFF;
+// SPACING + SIZE
+$small-size: 10px;
+$med-size: 20px;
+$large-size: 30px;
+$huge-size: 72px;
+// FONT SIZE
+$small-font: 14px;
+$med-font: 18px;
+$large-font: 24px;
+//////////////////
 
+.about {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: $med-size;
 
-  $navy-base: #0f0d25;
-  $orange-base: #ff9c01;
-  $light-white-base: #ffffff;
-  $navy: rgba($navy-base, 100);
-  $orange-color: rbga($orange-base, 0.88);
-  $light-white-yey: rbga($light-white-base, 0.88);
-  $small-spacing: 10px;
-
-  .bigTitle {
-    font-size: 30px;
-    color: white;
-  }
-
-  .headerGraphic {
-     max-width: 300px;
-     max-height: 300px;
-  }
-
-  .content {
-    margin: $small-spacing;
-    padding: $small-spacing;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: $navy;
-  }
-
-  .company {
-    color: white;
-    font-weight: bolder;
-  }
-
-  .contactInfo {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    position: fixed;
-  }
-
-  .experienceCard {
+  .aboutMe {
     text-align: left;
-    border-left: 1px solid $orange-color;
-    width: 100%;
-    margin: $small-spacing;
-    left: 50%;
+    color: $white;
+    max-width: 600px;
+    margin-left: $med-size;
   }
 
-  .experience {
-    div:nth-child(1n) {
-      border-left: 1px solid $orange-color;
+  .aboutMeContainer {
+    display: flex;
+  }
+}
+
+.absolute {
+  position: absolute;
+}
+
+.active {
+  display: flex;
+}
+
+.bigTitle {
+  color: $light-base;
+  font-family: 'Spartan', sans-serif;
+  font-size: $med-size;
+  font-weight: bold;
+  text-align: center;
+}
+
+.burgerClosed {
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  display: none;
+  flex-direction: column;
+  height: 2rem;
+  justify-content: space-around;
+  padding: 0;
+  position: fixed;
+  right: 1%;
+  top: 1%;
+  width: 2rem;
+  z-index: 9999;
+
+  &:focus {
+    outline: none;
+  }
+
+  div {
+    background: $white;
+    border-radius: $small-size;
+    height: 0.25rem;
+    position: relative;
+    transition: all 0.3s linear;
+    transform-origin: 1px;
+    width: 2rem;
+
+    :first-child {
+      transform: rotate(45deg);
+    }
+
+    :nth-child(2) {
+      opacity: '0';
+      transform: translateX($med-size);
+    }
+
+    :nth-child(3) {
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+.burgerOpen {
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  display: none;
+  flex-direction: column;
+  height: 2rem;
+  justify-content: space-around;
+  position: absolute;
+  right: 0;
+  top: 10%;
+  width: 2rem;
+  z-index: 10;
+
+  &:focus {
+    outline: none;
+  }
+
+  div {
+    background: $navy-base;
+    border-radius: $small-size;
+    height: 0.25rem;
+    position: relative;
+    transition: all 0.3s linear;
+    transform-origin: 1px;
+    width: 2rem;
+  }
+
+  :first-child {
+    transform: rotate(45deg);
+  }
+
+  :nth-child(2) {
+    opacity: 0;
+    transform: translateX($med-size);
+  }
+
+  :nth-child(3) {
+    transform: rotate(-45deg);
+  }
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.closed {
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 2rem;
+  padding: 0;
+  top: 5%;
+  right: 2rem;
+  width: 2rem;
+  z-index: 10;
+  
+  &:focus {
+    outline: none;
+  }
+  
+  div {
+    background: $white;
+    border-radius: $small-size;
+    height: 0.25rem;
+    position: relative;
+    transition: all 0.3s linear;
+    transform-origin: 1px;
+    width: 2rem;
+    
+    :first-child {
+      transform: rotate(0);
+    }
+    
+    :nth-child(2) {
+      opacity: '1';
+      transform: translateX(0);
+    }
+    
+    :nth-child(3) {
+      transform: rotate(0);
+    }
+  }
+}
+
+.column {
+  display: flex;
+  color: $white;
+  flex-direction: column;
+  font-size: $small-font;
+  margin: $med-size;
+  text-align: center;
+}
+
+.columnContainer {
+  display: flex;
+  margin: $small-size;
+}
+
+.contact {
+  align-items: center;
+  background-color: $navy-base;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: $small-size;
+  max-width: 400px;
+  text-align: center;
+  transition: opacity 0.5s;
+  opacity: 1;
+}
+
+.content {
+  align-items: center;
+  background-color: $navy-base;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Spartan', sans-serif;
+  font-weight: 570;
+  justify-content: center;
+  width: 100%;
+}
+
+.contactInfo {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  left: 0px;
+  position: fixed;
+  top: 50px;
+}
+
+.company {
+  color: $white;
+  font-weight: bolder;
+}
+
+.divider {
+  background-color: $white;
+  margin-bottom: $huge-size;
+  margin-top: $huge-size;
+  width: 100%;
+}
+
+.dropdownMenu {
+  display: flex;
+  flex-direction: column;
+  padding: $small-size;
+  z-index: 9999;
+}
+
+.dropdownItem {
+  color: $white;
+  padding: $small-size;
+  position: absolute;
+  text-decoration: none;
+}
+
+.experience {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  transition: opacity 0.5s;
+  opacity: 1;
+}
+.experienceCard {
+  display: flex;
+  border-radius: $small-size;
+  flex-direction: column;
+  max-width: 500px;
+  padding: $small-size;
+  text-align: left; 
+}
+
+.experienceCardHeader {
+  color: $white;
+  text-align: left;
+  font-family: 'Spartan', sans-serif;
+  padding-top: $small-size;
+  padding-left: $small-size;
+}
+
+.experineceCardText {
+  color: $white;
+  font-family: 'Spartan', sans-serif;
+  font-size: calc($small-size + 2vmin);
+  text-align: left;
+}
+
+.experienceCardSubHeaderText {
+  color: $light-base;
+  font-size: $small-font;
+  font-weight: bold;
+}
+
+.experienceCardSubHead {
+  display: flex;
+  justify-content: space-between;
+  margin: $small-size;
+}
+
+.experienceCardSubHeader {
+  color: $white;
+  font-size: $med-font;
+}
+
+.footer {
+  align-items: center;
+  background-color: $navy-base;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.footerText {
+  color: $light-base;
+  display: flex;
+  padding: $small-size;
+  flex-direction: row;
+  justify-content: center;
+  font-family: 'Bungee', cursive;
+}
+
+.footerArt {
+  height: 100%;
+  width: 100%;
+
+  .star-footer {
+    background-color: $white;
+    height: 3px;
+    margin-top: $med-size;
+    right: 190px;
+    width: 3px;
+    -webkit-animation: twinkle 2.1s linear infinite;
+    -moz-animation: twinkle 2.1s linear infinite;
+    -o-animation: twinkle 2.1s linear infinite;
+    animation: twinkle 2.1s linear infinite;
+  }
+  
+  .moon {
+    background: rgb(73, 66, 66);
+    border-radius: 50%;
+    border-bottom:3px solid #d8d3c8;
+    border-right:3px solid #d8d3c8;
+    height: $large-size;
+    right: 250px;
+    width: $large-size;
+  }
+}
+
+.headerLinks {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: $small-size;
+}
+
+.hidden {
+  display: none;
+}
+
+.hugeTitle {
+  color: $light-base;
+  font-family: 'Spartan', sans-serif;
+  font-size: $huge-size;
+  font-weight: bold;
+  text-align: center;
+}
+
+.hamburgerMenu {
+  display: none;
+}
+
+.sideBar {
+  align-items: center;
+  color: $white;
+  display: flex;
+  flex-direction: column;
+  font-size: calc($small-size + 2vmin);
+  justify-content: space-between;
+  padding: $small-size;
+  text-align: center;
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.headerName {
+  color: $light-base;
+  font-family: 'Bungee', cursive;
+  font-size: $med-font;
+  padding-left: $med-size;
+}
+
+.headerBar {
+  align-items: center;
+  display: flex;
+  background-color: $navy-base;
+  height: 50px;
+  justify-content: space-between;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  z-index: 9997;
+}
+
+.headerContent {
+  align-items: center;
+  color: $white;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Spartan', sans-serif;
+  font-size: calc($small-size + 2vmin);
+  justify-content: space-between;
+  margin: 0px;
+  text-align: center;
+  z-index: 89999;
+}
+
+.headerLink {
+  color: $white;
+  cursor: pointer;
+  font-size: $med-font;
+  margin: $large-size;
+  
+  &:hover {
+    color: $purple-base;
+    text-decoration: none;
+  }
+}
+
+.image {
+  border: 1px solid $white;
+  border-radius: 2px;
+  max-height: 25%;
+  max-width: 25%;
+  opacity: .5;
+}
+
+.icon {
+  margin: $med-size;
+  max-width: $large-size;
+  
+  &:hover path {
+    fill: $purple-base;
+  }
+}
+
+.link {
+  color: $white;
+  cursor: pointer;
+  
+  &:hover {
+    color: $purple-base;
+    text-decoration: none;
+  }
+}
+
+.mainSection {
+  align-items: center;
+  background-color: $navy-base;
+  color: $light-base;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 100px;
+  text-align: center;
+}
+
+.menu {
+  opacity: 1;
+}
+
+.open {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 2rem;
+  padding: 0;
+  position: absolute;
+  right: 2rem;
+  top: 5%;
+  width: 2rem;
+  z-index: 10;
+
+  &:focus {
+    outline: none;
+  }
+
+  div {
+    background: $navy-base;
+    border-radius: $small-size;
+    height: 0.25rem;
+    position: relative;
+    transition: all 0.3s linear;
+    transform-origin: 1px;
+    width: 2rem;
+
+    :first-child {
+      transform: rotate(45deg);
+    }
+
+    :nth-child(2) {
+      opacity: 0;
+      transform: translateX($med-size);
+    }
+
+    :nth-child(3) {
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+.position {
+  color: $white;
+  font-size: $large-font;
+  font-weight: bold;
+}
+
+.portrait {
+  border: 1px solid $white;
+  border-radius: 2px;
+  max-height: 300px;
+  max-width: 300px;
+}
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 1;
+  transition: opacity 0.5s;
+
+  .projectTitle {
+    align-items: center;
+    font-family: 'Spartan', sans-serif;
+    font-size: $med-size + 4;
+    font-weight: bold;
+    justify-content: center;
+    margin: $med-size;
+  }
+
+  .projectText {
+    background-color: $light-navy-base;
+    border-radius: 3px;
+    font-size: $med-size - 2;
+    padding: $med-size;
+    margin-left: $med-size;
+    margin-right: $med-size;
+    text-align: left;
+    width: 600px;
+  }
+
+  .projectCardBottom {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin: $med-size;
+  }
+
+  .projectCardText {
+    color: $white;
+    font-family: 'Spartan', sans-serif;
+    font-size: calc($small-size + 2vmin);
+    min-width: 400px;
+    text-align: left;
+    z-index: 1;
+  }
+
+  .projectCardContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: $small-size;
+    margin: $small-size;
+  }
+}
+
+.meText {
+  color: $white;
+  font-size: $med-font;
+  margin: $small-size;
+  width: 100%;
+}
+
+.menuOpen {
+  background: $white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 455vh;
+  padding: 2rem;
+  position: absolute;
+  right: -$med-size;
+  text-align: left;
+  top: 0;
+  transition: transform 0.3s ease-in-out;
+  
+  a {
+    color: $navy-base;
+    cursor: pointer;
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 0.3rem;
+    padding: 2rem 0;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 0.3s linear;
+
+    :first-child {
+      margin-top: $med-size;
+    }
+
+    &:hover {
+      color: $navy-base;
+    }
+  }
+}
+
+.menuClosed {
+  background: $white;
+  display: none;
+  flex-direction: column;
+  height: 455vh;
+  justify-content: flex-start;
+  opacity: 0;
+  padding: 2rem;
+  position: absolute;
+  right: 0;
+  text-align: left;
+  top: 0;
+  transition: transform 0.3s ease-in-out;
+  
+  a {
+    color: $navy-base;
+    cursor: pointer;
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 0.3rem;
+    padding: 2rem 0;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 0.3s linear;
+
+    &:hover {
+      color: $navy-base;
+    }
+  }
+}
+
+.resumeButton {
+  border: 1px solid $purple-base;
+  border-radius: $small-size;
+  color: $purple-base;
+  font-family: 'Bungee', cursive;
+  font-size: $med-font;
+  margin: $small-size;
+  padding: $small-size;
+  text-decoration: none;
+}
+
+.resumeButton:hover {
+  background-color: $white;
+  text-decoration: none;
+}
+
+.resumeText {
+  color: $white;
+  text-decoration: none;
+  font-weight: bolder;
+}
+
+.sectionHeader {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  text-align: left;
+  width: 65%;
+}
+
+.scrollDown {
+  align-items: center;
+  background-color: $navy-base;
+  display: flex;
+  justify-content: center;
+  margin-top: $huge-size;
+  width: 100%;
+}
+
+.skillTitle {
+  color: $light-base;
+  font-family: 'Spartan', sans-serif;
+  font-size: $small-font;
+  max-width: 300px;
+}
+
+.tabsContainer {
+  margin: 40px;
+  align-items: center;
+  flex-direction: row;
+  display: flex;
+  border-radius: $small-size;
+  padding: $small-size;
+
+  .tabs {
+    background-color: $white;
+    align-items: flex-start;
+    flex-direction: column;
+    display: flex;
+    justify-content: flex-start;
+    text-align: left;
+    max-width: 300px;
+    min-width: 200px;
+  }
+
+  .activeTabButton {
+    background-color: $light-navy-base;
+    color: $purple-base;
+    font-weight: bold;
+    text-align: left;
+    font-size: $large-font;
+    font-family: 'Spartan', cursive;
+    border: none;
+    padding: $small-size;
+    width: 100%;
+  
+    &:hover {
+      color: $white;
+      background-color: $light-navy-base;
     }
   }
 
-  .experineceCardText {
-    padding: $small-spacing;
-    color: white;;
+  .tabButton {
+    background-color: $navy-base;
+    color: $white;
+    font-weight: bold;
+    text-align: left;
+    font-size: $large-font;
+    font-family: 'Spartan', cursive;
+    border: none;
+    padding: $small-size;
+    width: 100%;
+  
+    &:hover {
+      color: $purple-base;
+      background-color: $light-navy-base;
+    }
+  }
+}
+
+.text {
+  color: $white;
+  text-align: center;
+  font-family: 'Spartan', sans-serif;
+  font-weight: bold;
+  font-size: $med-size;
+  width: 600px;
+}
+
+.title {
+  color: $light-base;
+  margin: $small-size;
+  font-family: 'Spartan', sans-serif;
+  font-weight: bold;
+}
+
+.welcome {
+  align-items: center;
+  background-color: $navy-base;
+  color: $light-base;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.welcomeText {
+  margin-top: 200px;
+  z-index: 9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 600px) {
+
+  .about {
+    padding: $small-size;
+    transition: opacity 0.5s;
+    opacity: 1;
+  }
+  
+  .aboutMe {
+    width: 100%;
+  }
+  
+  .aboutMeContainer {
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .burgerClosed {
+    display: flex;
+    right: 4px;
+  }
+  
+  .burgerOpen {
+    display: flex;
+  }
+
+  .columnContainer {
+    flex-direction: column;
+  }
+
+  // .content {
+  //   width: 600px;
+  // }
+
+  .contactInfo {
+    display: none;
+  }
+
+  .experienceCard {
+    flex-direction: column;
+    height: 300px;
+    margin: $small-size;
+    padding: $small-size;
+    width: 300px;
+  }
+
+  .experienceCardHeader {
+    width: 100%;
   }
 
   .experienceCardHeader {
     text-align: center;
-    background-color: $navy;
-    color: white;
-    padding: $small-spacing;
-    text-align: left;
   }
 
-  .footer {
-    color: $orange-color;
-    display: flex;
-    padding: $small-spacing;
-    font-style: italic;
-    flex-direction: row;
-    justify-content: center;
+  .experienceCardSubHead {
+    flex-direction: column;
   }
 
-  .hamburgerMenu {
+  .headerContent {
+    align-items: flex-end;
+  }
+
+  .headerBar {
+    justify-content: space-evenly;
+    width: 100%;
+  }
+
+  .headerLinks {
     display: none;
   }
 
-  .header {
-    background-color: $navy;
+  .hamburgerMenu {
+    background-color: $navy-base;
     display: flex;
-    color: white;
-    flex-direction: column;
-    align-items: center;
-    padding: $small-spacing;
-    width: 100%;
-    justify-content: space-between;
-    font-size: calc($small-spacing + 2vmin);
-    text-align: center;
+    justify-content: flex-end;
   }
 
-  .headerLink {
-    color: white;
-    text-decoration: none;
+  .header {
+    flex-direction: column;
+  }
+
+  .hide {
+    margin-top: 0px;
+  }
+
+  .hugeTitle {
+    font-size: $large-size;
+    position: relative;
+    z-index: 9;
   }
 
   .image {
-    max-width: 800px;
-    max-height: 600px;
+    display: none;
   }
 
-  .imagesContainer {
-    display: flex;
+  .mainSection {
+    width: 550px;
+  }
+
+  .moon {
+    display: none;
+  }
+
+  .projects {
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+  }
+
+  .projectCardBottom {
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+  }
+
+  .projectCardContainer {
     flex-direction: column;
     text-align: center;
-    max-width: 600px;
+    width: 300px;
   }
-
-  .icon {
-    margin: 20px;
-    height: 30px;
-    width: 30px;
-  }
-  .paragraph {
+  
+  .projectText {
+    margin: $small-size;
     text-align: left;
+    width: 300px;
+  }
+  
+  .projectTextContainer {
+    text-align: center;
+  }
+  
+  .projectTitle {
+    font-size: 16px;
+    max-width: 200px;
+    margin-left: $small_size;
   }
 
-  .logo {
-    height: 40vmin;
-    pointer-events: none;
+  .skillTitle {
+    width: 200px;
   }
-
-  .position {
-    color: $orange-color;
-    font-weight: bold;
-  }
-
-  .portfolioHome {
-    display: flex;
-    flex-direction: column;
-    background-color: $navy;
-  }
-
-  .resumeButton {
-    padding: $small-spacing;
-    color: $orange-color;
-    text-decoration: none;
-    border: 1px solid $orange-color;
-    font-weight: bolder;
-    border-radius: $small-spacing;
-  }
-
-  .resumeButton:hover {
-    background-color: $orange-color;
-  }
-
-  .resumeText {
-    color: white;
-    text-decoration: none;
-    font-weight: bolder;
-  }
-
-  .routeContent {
-    margin-top: 60px;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  
+  .tabs {
     align-items: center;
+    justify-content: center;
+    width: 100%;
   }
-
-  .skill {
-    max-width: 60px;
-    min-width: 60px;
-  }
-
-  .title {
-    color: #ff9c00;
-  }
-
-  .topHeader {
-    display: flex;
+  
+  .tabsContainer {
     flex-direction: column;
-    text-align: left;
   }
-
+  
   .text {
-    color: #ffffff;
+    width: 100%;
   }
 
-  .years {
-    color: #ffffff;
-    font-style: italic;
+  .video {
+    display: none;
   }
-
-  @media (max-width: 600px) {
-    .contactInfo {
-      flex-direction: row;
-      position: relative;
-      justify-content: center;
-      cursor: pointer;
-    }
-    .hamburgerMenu {
-      display: flex;
-      justify-content: flex-end;
-      background-color: $navy;
-    }
+  
+  .welcomeText {
+    margin-top: 300px;
   }
+}
