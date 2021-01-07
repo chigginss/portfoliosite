@@ -7,7 +7,7 @@ export const Divider = ({
 }) => {
   return (
     <div id={text.toLowerCase()} className="sectionHeader">
-        <div className="title">{text}</div>
+        <div className="dividerTitle">{text}</div>
         <hr class="divider"></hr>
     </div>
   );

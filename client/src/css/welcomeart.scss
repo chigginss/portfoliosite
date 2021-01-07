@@ -146,9 +146,18 @@ body {
 
 .main {
     background-color: #101D42;
-    height: 750px;
+    height: 600px;
 }
 
+.moon {
+    background: rgb(73, 66, 66);
+    border-radius: 50%;
+    border-bottom:3px solid #d8d3c8;
+    border-right:3px solid #d8d3c8;
+    height: 30px;
+    right: 250px;
+    width: 30px;
+}
 .planet-one {
     background: #dd3113;
     bottom: 80px;
@@ -165,7 +174,7 @@ body {
     animation: spin 5s linear infinite;
 }
 
-section {
+.section {
     overflow: hidden;
     position: absolute;
     width: 100%;
@@ -173,7 +182,7 @@ section {
 
 .ship {
     left: 80px;
-    top: 50%;
+    top: 85%;
     -webkit-animation: spaceshipanimate 10s linear infinite;
     -moz-animation: spaceshipanimate 10s linear infinite;
     -o-animation: spaceshipanimate 10s linear infinite;
@@ -260,6 +269,18 @@ section {
     height: 15px;
     right: 0px;
     width: 30px;
+}
+
+.star-footer {
+    background-color: white;
+    height: 3px;
+    margin-top: 20px;
+    right: 190px;
+    width: 3px;
+    -webkit-animation: twinkle 2.1s linear infinite;
+    -moz-animation: twinkle 2.1s linear infinite;
+    -o-animation: twinkle 2.1s linear infinite;
+    animation: twinkle 2.1s linear infinite;
 }
 
 .star-one {
@@ -497,7 +518,7 @@ ul.no-bullet {
     top: 3px;
 }
 
-@media (min-width : 420px) and (max-width : 799px) { 
+@media (min-width : 300px) and (max-width : 500px) { 
 
     .max_right { right: -80px; }
 
@@ -506,10 +527,11 @@ ul.no-bullet {
 
 }
 
-@media (max-width: 600px) {
+@media (max-width: 500px) {
     .planet-one {display: none;}
     .ring {display: none;}
     .ring-behind {display: none;}
+    .ship {top: 40%;}
     .star-one{bottom: 10px;}
     .star-two{left: 380px;}
     .star-three{left: 20px;}
