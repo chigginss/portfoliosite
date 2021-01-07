@@ -23,12 +23,15 @@ class Welcome extends Component {
 
   render() {
     const ScrollDown = styled.span`    
-        color: #6564DB;
+        align-items: center;
         border-left: 3px solid #fff;
         border-bottom: 3px solid #fff;
+        color: #6564DB;
+        display: flex;
         height: 24px;
-        position: absolute;
-        margin: 20px;
+        justify-content: center;
+        position: relative;
+        margin: 30px;
         width: 24px;
         -webkit-transform: rotate(-45deg);
         transform: rotate(-45deg);
@@ -58,6 +61,10 @@ class Welcome extends Component {
                 transform: rotate(-45deg) translate(0, 0);
             }
         }
+
+        @media (max-width: 600px) {
+            margin: 72px;
+        }
     `;  
     return (
         <div>
@@ -69,11 +76,9 @@ class Welcome extends Component {
                         I'm a CSSTH lord and full stack software developer based in San Francisco.
                     </p>
                     <div className="text">Animation made entirely with CSS</div>
-                    <div className="scrollDown">
-                        <a href="#about" style={{ display: `${this.props.hideChev}`}}>
-                            <ScrollDown/>
-                        </a>
-                    </div>
+                    <a className="scrollDown" href="#about" style={{ display: `${this.props.hideChev}`}}>
+                        <ScrollDown/>
+                    </a>
                 </div>
             </div>
         </div>

@@ -214,14 +214,11 @@ $large-font: 24px;
 }
 
 .content {
-  align-items: center;
   background-color: $navy-base;
-  display: flex;
-  flex-direction: column;
   font-family: 'Spartan', sans-serif;
+  overflow-x: hidden;
+  position: relative;
   font-weight: 570;
-  justify-content: center;
-  width: 100%;
 }
 
 .contactInfo {
@@ -245,6 +242,12 @@ $large-font: 24px;
   width: 100%;
 }
 
+.dividerTitle {
+  color: $light-base;
+  font-family: 'Spartan', sans-serif;
+  font-weight: bold;
+}
+
 .dropdownMenu {
   display: flex;
   flex-direction: column;
@@ -265,7 +268,6 @@ $large-font: 24px;
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  transition: opacity 0.5s;
   opacity: 1;
 }
 .experienceCard {
@@ -314,6 +316,7 @@ $large-font: 24px;
   background-color: $navy-base;
   display: flex;
   justify-content: center;
+  margin-top: $huge-size; 
   width: 100%;
 }
 .footerText {
@@ -325,74 +328,8 @@ $large-font: 24px;
   font-family: 'Bungee', cursive;
 }
 
-.footerArt {
-  height: 100%;
-  width: 100%;
-
-  .star-footer {
-    background-color: $white;
-    height: 3px;
-    margin-top: $med-size;
-    right: 190px;
-    width: 3px;
-    -webkit-animation: twinkle 2.1s linear infinite;
-    -moz-animation: twinkle 2.1s linear infinite;
-    -o-animation: twinkle 2.1s linear infinite;
-    animation: twinkle 2.1s linear infinite;
-  }
-  
-  .moon {
-    background: rgb(73, 66, 66);
-    border-radius: 50%;
-    border-bottom:3px solid #d8d3c8;
-    border-right:3px solid #d8d3c8;
-    height: $large-size;
-    right: 250px;
-    width: $large-size;
-  }
-}
-
-.headerLinks {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin: $small-size;
-}
-
-.hidden {
-  display: none;
-}
-
-.hugeTitle {
-  color: $light-base;
-  font-family: 'Spartan', sans-serif;
-  font-size: $huge-size;
-  font-weight: bold;
-  text-align: center;
-}
-
 .hamburgerMenu {
   display: none;
-}
-
-.sideBar {
-  align-items: center;
-  color: $white;
-  display: flex;
-  flex-direction: column;
-  font-size: calc($small-size + 2vmin);
-  justify-content: space-between;
-  padding: $small-size;
-  text-align: center;
-  width: 100%;
-  font-family: 'Montserrat', sans-serif;
-}
-
-.headerName {
-  color: $light-base;
-  font-family: 'Bungee', cursive;
-  font-size: $med-font;
-  padding-left: $med-size;
 }
 
 .headerBar {
@@ -420,6 +357,13 @@ $large-font: 24px;
   z-index: 89999;
 }
 
+.headerLinks {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: $small-size;
+}
+
 .headerLink {
   color: $white;
   cursor: pointer;
@@ -430,6 +374,25 @@ $large-font: 24px;
     color: $purple-base;
     text-decoration: none;
   }
+}
+
+.headerName {
+  color: $light-base;
+  font-family: 'Bungee', cursive;
+  font-size: $med-font;
+  padding-left: $med-size;
+}
+
+.hidden {
+  display: none;
+}
+
+.hugeTitle {
+  color: $light-base;
+  font-family: 'Spartan', sans-serif;
+  font-size: $huge-size;
+  font-weight: bold;
+  text-align: center;
 }
 
 .image {
@@ -554,7 +517,6 @@ $large-font: 24px;
     margin-left: $med-size;
     margin-right: $med-size;
     text-align: left;
-    width: 600px;
   }
 
   .projectCardBottom {
@@ -568,7 +530,7 @@ $large-font: 24px;
     color: $white;
     font-family: 'Spartan', sans-serif;
     font-size: calc($small-size + 2vmin);
-    min-width: 400px;
+    max-width: 600px;
     text-align: left;
     z-index: 1;
   }
@@ -660,7 +622,7 @@ $large-font: 24px;
   color: $purple-base;
   font-family: 'Bungee', cursive;
   font-size: $med-font;
-  margin: $small-size;
+  margin: $med-size;
   padding: $small-size;
   text-decoration: none;
 }
@@ -676,21 +638,36 @@ $large-font: 24px;
   font-weight: bolder;
 }
 
+.scrollDown {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: $huge-size;
+}
+
 .sectionHeader {
   align-items: center;
   display: flex;
   justify-content: center;
+  margin-top: $huge-size;
+  margin-bottom: $large-size;
   text-align: left;
   width: 65%;
 }
 
-.scrollDown {
+.sideBar {
   align-items: center;
-  background-color: $navy-base;
+  color: $white;
   display: flex;
-  justify-content: center;
-  margin-top: $huge-size;
+  flex-direction: column;
+  font-family: 'Montserrat', sans-serif;
+  font-size: calc($small-size + 2vmin);
+  justify-content: space-between;
+  padding: $small-size;
+  text-align: center;
   width: 100%;
+  z-index: 9000;
 }
 
 .skillTitle {
@@ -701,7 +678,7 @@ $large-font: 24px;
 }
 
 .tabsContainer {
-  margin: 40px;
+  margin: $med-size;
   align-items: center;
   flex-direction: row;
   display: flex;
@@ -709,7 +686,6 @@ $large-font: 24px;
   padding: $small-size;
 
   .tabs {
-    background-color: $white;
     align-items: flex-start;
     flex-direction: column;
     display: flex;
@@ -760,7 +736,6 @@ $large-font: 24px;
   font-family: 'Spartan', sans-serif;
   font-weight: bold;
   font-size: $med-size;
-  width: 600px;
 }
 
 .title {
@@ -789,7 +764,7 @@ $large-font: 24px;
   align-items: center;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
 
   .about {
     padding: $small-size;
@@ -798,6 +773,7 @@ $large-font: 24px;
   }
   
   .aboutMe {
+    margin: $large-size;
     width: 100%;
   }
   
@@ -809,7 +785,6 @@ $large-font: 24px;
   
   .burgerClosed {
     display: flex;
-    right: 4px;
   }
   
   .burgerOpen {
@@ -820,12 +795,21 @@ $large-font: 24px;
     flex-direction: column;
   }
 
-  // .content {
-  //   width: 600px;
-  // }
+  .content {
+    width: 100%;
+  }
 
   .contactInfo {
     display: none;
+  }
+
+  .divider {
+    display: none;
+  }
+
+  .dividerTitle {
+    border-bottom: 1px solid $white;
+    padding: $small-size;
   }
 
   .experienceCard {
@@ -854,7 +838,6 @@ $large-font: 24px;
 
   .headerBar {
     justify-content: space-evenly;
-    width: 100%;
   }
 
   .headerLinks {
@@ -886,7 +869,7 @@ $large-font: 24px;
   }
 
   .mainSection {
-    width: 550px;
+    width: 100%;
   }
 
   .moon {
@@ -896,25 +879,21 @@ $large-font: 24px;
   .projects {
     align-items: center;
     justify-content: center;
-    width: 300px;
   }
 
   .projectCardBottom {
     align-items: center;
     justify-content: center;
-    width: 300px;
   }
 
   .projectCardContainer {
     flex-direction: column;
     text-align: center;
-    width: 300px;
   }
   
   .projectText {
     margin: $small-size;
     text-align: left;
-    width: 300px;
   }
   
   .projectTextContainer {
@@ -923,7 +902,6 @@ $large-font: 24px;
   
   .projectTitle {
     font-size: 16px;
-    max-width: 200px;
     margin-left: $small_size;
   }
 

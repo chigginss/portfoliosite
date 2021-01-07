@@ -1,18 +1,18 @@
 import React, { Component, useState } from 'react';
 // components
-import About from './components/About.js';
-import Divider from './components/Divider.js';
-import Experience from './components/Experience.js';
-import FooterArt from './components/FooterArt.js';
-import Projects from './components/Projects.js';
-import Welcome from './components/Welcome.js';
+import About from './About.js';
+import Divider from './Divider.js';
+import Experience from './Experience.js';
+import FooterArt from './FooterArt.js';
+import Projects from './Projects.js';
+import Welcome from './Welcome.js';
 // SVG components
-import LinkedInIcon from './icons/LinkedInIcon.js';
-import GitHubIcon from './icons/GitHubIcon.js';
-import MailIcon from './icons/MailIcon.js';
+import LinkedInIcon from '../icons/LinkedInIcon.js';
+import GitHubIcon from '../icons/GitHubIcon.js';
+import MailIcon from '../icons/MailIcon.js';
 // SCSS
 import styled from 'styled-components'
-import './css/portfolio.scss';
+import '../css/portfolio.scss';
 
 class Home extends Component {
 
@@ -68,42 +68,43 @@ class Home extends Component {
         font-family: 'Bungee', cursive;
         padding: 10px;
         text-decoration: none;
-        margin: 40px;
-
+        margin-top: 20px;
 
         :hover {
             background-color: rgb(23, 41, 90);
             color: #ffffff;
             text-decoration: none
         }
+
+        @media (max-width: 600px) {
+          margin-top: 90px;
+        }
     `;
 
     return (
-        <div>
-            <div className="content">
-                <Header/>
-                <div className="mainSection" style={{ opacity: this.state.showFooter ? '0' : '1'}}>
-                  <SideBar />
-                </div>
-                <Welcome hideChev={this.state.hideChev} />
-                <div className="mainSection" style={{ opacity: `${this.state.opacity}`}}>
-                    <Divider text={'ABOUT'}/>
-                    <About/>
-                    <Divider text={'EXPERIENCE'}/>
-                    <Experience/>
-                    <StyledButton download="resume" href="resume.pdf" target="_blank">DOWNLOAD RESUME</StyledButton>
-                    <Divider text={'PROJECTS'}/>
-                    <Projects />
-                    <Divider text={'CONTACT'}/>
-                    <div className="contact">
-                        <h1 className="title">Let's Chat!</h1>
-                        <div className="text">I'm currently not looking for work, but I'm always happy to connect.</div>
-                        <StyledButton href="mailto:cierramhiggins@gmail.com">CONTACT ME</StyledButton>
-                    </div>
-                </div>
-                <FooterArt />
+        <div className="content">
+          <Header/>
+          <div style={{ opacity: this.state.showFooter ? '0' : '1'}}>
+            <SideBar />
+          </div>
+          <Welcome hideChev={this.state.hideChev} />
+          <div className="mainSection" style={{ opacity: `${this.state.opacity}`}}>
+            <Divider text={'ABOUT'}/>
+            <About/>
+            <Divider text={'EXPERIENCE'}/>
+            <Experience/>
+            <StyledButton download="resume" href="resume.pdf" target="_blank">DOWNLOAD RESUME</StyledButton>
+            <Divider text={'PROJECTS'}/>
+            <Projects />
+            <Divider text={'CONTACT'}/>
+            <div className="contact">
+                <h1 className="title">Let's Chat!</h1>
+                <div className="text">I'm currently not looking for work, but I'm always happy to connect.</div>
+                <StyledButton href="mailto:cierramhiggins@gmail.com">CONTACT ME</StyledButton>
             </div>
-        </div>
+          </div>
+          <FooterArt />
+      </div>
     );
   }
 }

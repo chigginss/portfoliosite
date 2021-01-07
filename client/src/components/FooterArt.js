@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '../css/portfolio.scss';
+import '../css/welcomeart.scss';
 import LinkedInIcon from '../icons/LinkedInIcon.js';
 import GitHubIcon from '../icons/GitHubIcon.js';
 import MailIcon from '../icons/MailIcon.js';
@@ -19,8 +20,8 @@ class FooterArt extends Component {
 
     render() {
         return (  
-        <div class="main">
-            <div class="footerArt">
+        <div>
+            <div>
               <span class="absolute star-footer" style={{ right: '300px', 'margin-top': '90px'}}></span>
               <span class="absolute star-footer" style={{ left: '190px', 'margin-top': '2px'}}></span>
               <span class="absolute star-footer" style={{ right: '90px', 'margin-top': '90px'}}></span>

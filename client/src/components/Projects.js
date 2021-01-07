@@ -31,7 +31,9 @@ class Projects extends Component {
                 Effect iterates through and "selects" a dragon from popular games and movies. Generated thousands of impressions. 
                 View the effect <a href="https://www.instagram.com/ar/705525493353127/" className="link">on Instagram.</a>
               </p>
-              <div className="skillTitle">SPARK AR STUDIO. GRAPHICS BY JENNIFER ARMSTRONG.</div>
+              <div className="projectCardBottom">
+                <div className="skillTitle">SPARK AR STUDIO. GRAPHICS BY JENNIFER ARMSTRONG.</div>
+              </div>
             </div>
             <video className="video" width="190" autoPlay loop >
             <source src={wday} type="video/mp4"/>
