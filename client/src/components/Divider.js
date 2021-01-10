@@ -8,7 +8,7 @@ export const Divider = ({
   return (
     <div id={text.toLowerCase()} className="sectionHeader">
         <div className="dividerTitle">{text}</div>
-        <hr class="divider"></hr>
+        <hr className="divider"></hr>
     </div>
   );
 };

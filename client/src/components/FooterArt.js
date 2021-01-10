@@ -22,16 +22,16 @@ class FooterArt extends Component {
         return (  
         <div>
             <div>
-              <span class="absolute star-footer" style={{ right: '300px', 'margin-top': '90px'}}></span>
-              <span class="absolute star-footer" style={{ left: '190px', 'margin-top': '2px'}}></span>
-              <span class="absolute star-footer" style={{ right: '90px', 'margin-top': '90px'}}></span>
-              <span class="absolute star-footer" style={{ left: '90px', 'margin-top': '30px'}}></span>
-              <span class="absolute star-footer" style={{ right: '500px', 'margin-top': '25px'}}></span>
-              <span class="absolute star-footer"></span>
-              <span class="absolute star-footer" style={{ left: '350px', 'margin-top': '50px'}}></span>
-              <span class="absolute star-footer" style={{ left: '600px', 'margin-top': '80px'}}></span>
-              <span class="absolute star-footer" style={{ left: '300px', 'margin-top': '20px'}}></span>
-              <span class="absolute moon"></span>
+              <span className="absolute star-footer" style={{ right: '300px', 'marginTop': '90px'}}></span>
+              <span className="absolute star-footer" style={{ left: '190px', 'marginTop': '2px'}}></span>
+              <span className="absolute star-footer" style={{ right: '90px', 'marginTop': '90px'}}></span>
+              <span className="absolute star-footer" style={{ left: '90px', 'marginTop': '30px'}}></span>
+              <span className="absolute star-footer" style={{ right: '500px', 'marginTop': '25px'}}></span>
+              <span className="absolute star-footer"></span>
+              <span className="absolute star-footer" style={{ left: '350px', 'marginTop': '50px'}}></span>
+              <span className="absolute star-footer" style={{ left: '600px', 'marginTop': '80px'}}></span>
+              <span className="absolute star-footer" style={{ left: '300px', 'marginTop': '20px'}}></span>
+              <span className="absolute moon"></span>
               <div className="footer">
                 <a href='https://github.com/chigginss'>
                     <GitHubIcon />
@@ -43,7 +43,7 @@ class FooterArt extends Component {
                     <MailIcon />
                 </a>
               </div>
-              <span class="footerText">Designed and built by Cierra Higgins</span>
+              <span className="footerText">Designed and built by Cierra Higgins</span>
             </div>
           </div>
         );

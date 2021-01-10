@@ -33,7 +33,7 @@ class Home extends Component {
           .then(res => this.setState({ apiResponse: res }));
   }
 
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
       this.callAPI();
   }
 

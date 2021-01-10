@@ -4,57 +4,57 @@ import '../css/welcomeart.scss';
 class WelcomeArt extends Component {
 
   render() {
-    return (       
-          <body>
-            <section class="main">
+    return (
+      <div>
+        <section className="main">
+    
+          <span className="absolute sun"></span>
+
+          <span className="absolute star-one"></span>
+
+          <span className="absolute astroid"></span>
+
+          <span className="absolute planet-one"></span>
+          <span className="absolute ring"></span>
+          <span className="absolute ring-behind"></span>
+
+          <span className="absolute star-two"></span>
+          <span className="absolute star-three"></span>
+          <span className="absolute star-four"></span>
+          <span className="absolute star-five"></span>
+          <span className="absolute star-six"></span>
+          <span className="absolute star-seven"></span>
+          <span className="absolute star-eight"></span>
+          <span className="absolute star-nine"></span>
+          <span className="absolute star-ten"></span>
         
-              <span class="absolute sun"></span>
+          <div className="absolute astroid"></div>
 
-              <span class="absolute star-one"></span>
-
-              <span class="absolute astroid"></span>
-
-              <span class="absolute planet-one"></span>
-              <span class="absolute ring"></span>
-              <span class="absolute ring-behind"></span>
-
-              <span class="absolute star-two"></span>
-              <span class="absolute star-three"></span>
-              <span class="absolute star-four"></span>
-              <span class="absolute star-five"></span>
-              <span class="absolute star-six"></span>
-              <span class="absolute star-seven"></span>
-              <span class="absolute star-eight"></span>
-              <span class="absolute star-nine"></span>
-              <span class="absolute star-ten"></span>
-            
-              <div class="absolute astroid"></div>
-
-              <div class="absolute comet">
-                <ul class="no-bullet">
-                  <li class="comet-body"></li>
-                  <li class="comet-tail-one"></li>
-                  <li class="comet-tail-two"></li>
-                  <li class="comet-tail-three"></li>
-                  <li class="comet-tail-four"></li>
-                </ul>
-              </div>
+          <div className="absolute comet">
+            <ul className="no-bullet">
+              <li className="comet-body"></li>
+              <li className="comet-tail-one"></li>
+              <li className="comet-tail-two"></li>
+              <li className="comet-tail-three"></li>
+              <li className="comet-tail-four"></li>
+            </ul>
+          </div>
 
 
-              <div class="absolute ship">
-                <ul class="no-bullet">
-                  <li class="ship-window"></li>
-                  <li class="ship-body"></li>
-                  <li class="wing1"></li>
-                  <li class="wing1 flipwing"></li>
-                  <li class="ship-rocket"></li>
-                  <li class="ship-fire-orange"></li>
-                  <li class="ship-fire-red"></li>
-                  <li class="ship-fire-yellow"></li>
-                </ul>
-              </div>
-            </section>
-        </body>
+          <div className="absolute ship">
+            <ul className="no-bullet">
+              <li className="ship-window"></li>
+              <li className="ship-body"></li>
+              <li className="wing1"></li>
+              <li className="wing1 flipwing"></li>
+              <li className="ship-rocket"></li>
+              <li className="ship-fire-orange"></li>
+              <li className="ship-fire-red"></li>
+              <li className="ship-fire-yellow"></li>
+            </ul>
+          </div>
+        </section>
+      </div>
     );
   }
 }
