@@ -8,7 +8,7 @@ class Contact extends Component {
       <div className="content">
         <div className="contact" id="contact">
             <h1 className="title">Let's Chat!</h1>
-            <div className="about">I'm currently not looking for work, but I would love to connect.</div>
+            <div className="about">I'm always happy to connect-- I'll do my best to get back to you quickly.</div>
             <a className="resumeButton" href="mailto:cierramhiggins@gmail.com">Contact Me</a>
         </div>
       </div>

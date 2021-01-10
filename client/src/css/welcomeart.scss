@@ -145,7 +145,7 @@ body {
 }
 
 .main {
-    background-color: #101D42;
+    background-color: #111D4A;
     height: 600px;
 }
 
@@ -528,6 +528,7 @@ ul.no-bullet {
 }
 
 @media (max-width: 500px) {
+    .astroid {display: none;}
     .planet-one {display: none;}
     .ring {display: none;}
     .ring-behind {display: none;}
@@ -542,6 +543,7 @@ ul.no-bullet {
     .star-eight{top: 30px;}
     .star-nine{left: 80px;}
     .star-ten{left: 70px;}
+    .sun {display: none;}
 }
 
 @media (min-width : 800px) and (max-width : 1024px) { 

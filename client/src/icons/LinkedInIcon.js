@@ -3,7 +3,7 @@ import '../css/portfolio.scss';
 
 const LinkedInIcon = ({
     style = {},
-    fill = "#fff",
+    fill = "#FFCF99",
     width = "100%",
     className = "icon",
     viewBox = "0 0 24 24"

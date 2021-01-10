@@ -1,11 +1,10 @@
 // GOOGLE FONTS
 @import url('https://fonts.googleapis.com/css2?family=Arvo&family=Bungee&family=Josefin+Sans&family=Mukta:wght@200&family=Spartan:wght@200;570;600&family=Yanone+Kaffeesatz:wght@200&display=swap');
 // COLORS
-$light-base: #89D2DC;
-$light-navy-base: #17295A;
-$navy-base: #101D42;
-$purple-base: #6564DB;
-$white: #FFFFFF;
+$light-base: #354674; // #89D2DC;
+$navy-base: #111D4A;
+$tan-base: #FFCF99;
+$white: #FFF8F0;
 // SPACING + SIZE
 $small-size: 10px;
 $med-size: 20px;
@@ -23,6 +22,10 @@ $large-font: 24px;
   flex-direction: column;
   align-items: center;
   margin-top: $med-size;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 1s;
 
   .aboutMe {
     text-align: left;
@@ -235,6 +238,15 @@ $large-font: 24px;
   font-weight: bolder;
 }
 
+.centerTitle {
+  color: $light-base;
+  font-family: 'Spartan', sans-serif;
+  font-weight: bold;
+  font-size: $large-size;
+  text-align: center;
+  width: 100%;
+}
+
 .divider {
   background-color: $white;
   margin-bottom: $huge-size;
@@ -246,6 +258,7 @@ $large-font: 24px;
   color: $light-base;
   font-family: 'Spartan', sans-serif;
   font-weight: bold;
+  padding: $small-size;
 }
 
 .dropdownMenu {
@@ -270,11 +283,14 @@ $large-font: 24px;
   text-align: center;
   opacity: 1;
 }
+
 .experienceCard {
   display: flex;
   border-radius: $small-size;
   flex-direction: column;
+  margin: $small-size;
   max-width: 500px;
+  max-height: 230px;
   padding: $small-size;
   text-align: left; 
 }
@@ -319,6 +335,7 @@ $large-font: 24px;
   margin-top: $huge-size; 
   width: 100%;
 }
+
 .footerText {
   color: $light-base;
   display: flex;
@@ -365,13 +382,13 @@ $large-font: 24px;
 }
 
 .headerLink {
-  color: $white;
+  color: $tan-base;
   cursor: pointer;
   font-size: $med-font;
   margin: $large-size;
   
   &:hover {
-    color: $purple-base;
+    color: $light-base;
     text-decoration: none;
   }
 }
@@ -395,11 +412,15 @@ $large-font: 24px;
   text-align: center;
 }
 
+.imageContainer {
+  width: 400px;
+}
+
 .image {
   border: 1px solid $white;
   border-radius: 2px;
-  max-height: 25%;
-  max-width: 25%;
+  width: 100%;
+  height: auto;
   opacity: .5;
 }
 
@@ -408,17 +429,26 @@ $large-font: 24px;
   max-width: $large-size;
   
   &:hover path {
-    fill: $purple-base;
+    fill: $light-base;
   }
 }
 
+.leftTitle {
+  color: $light-base;
+  font-family: 'Spartan', sans-serif;
+  font-weight: bold;
+  font-size: $large-size;
+  text-align: left;
+  width: 100%;
+}
+
 .link {
-  color: $white;
+  color: $tan-base;
   cursor: pointer;
+  text-decoration: none;
   
   &:hover {
-    color: $purple-base;
-    text-decoration: none;
+    color: $light-base;
   }
 }
 
@@ -431,6 +461,15 @@ $large-font: 24px;
   justify-content: center;
   margin-top: 100px;
   text-align: center;
+}
+
+@keyframes fadeInOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .menu {
@@ -510,7 +549,7 @@ $large-font: 24px;
   }
 
   .projectText {
-    background-color: $light-navy-base;
+    background-color: $light-base;
     border-radius: 3px;
     font-size: $med-size - 2;
     padding: $med-size;
@@ -617,9 +656,9 @@ $large-font: 24px;
 }
 
 .resumeButton {
-  border: 1px solid $purple-base;
+  border: 1px solid $tan-base;
   border-radius: $small-size;
-  color: $purple-base;
+  color: $tan-base;
   font-family: 'Bungee', cursive;
   font-size: $med-font;
   margin: $med-size;
@@ -641,6 +680,7 @@ $large-font: 24px;
 .scrollDown {
   align-items: center;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   text-align: center;
   margin-top: $huge-size;
@@ -687,8 +727,8 @@ $large-font: 24px;
 
   .tabs {
     align-items: flex-start;
-    flex-direction: column;
     display: flex;
+    flex-direction: column;
     justify-content: flex-start;
     text-align: left;
     max-width: 300px;
@@ -696,24 +736,7 @@ $large-font: 24px;
   }
 
   .activeTabButton {
-    background-color: $light-navy-base;
-    color: $purple-base;
-    font-weight: bold;
-    text-align: left;
-    font-size: $large-font;
-    font-family: 'Spartan', cursive;
-    border: none;
-    padding: $small-size;
-    width: 100%;
-  
-    &:hover {
-      color: $white;
-      background-color: $light-navy-base;
-    }
-  }
-
-  .tabButton {
-    background-color: $navy-base;
+    background-color: $light-base;
     color: $white;
     font-weight: bold;
     text-align: left;
@@ -724,8 +747,26 @@ $large-font: 24px;
     width: 100%;
   
     &:hover {
-      color: $purple-base;
-      background-color: $light-navy-base;
+      color: $white;
+      background-color: $light-base;
+    }
+  }
+
+  .tabButton {
+    background-color: $navy-base;
+    color: $tan-base;
+    font-weight: bold;
+    text-align: left;
+    font-size: $large-font;
+    font-family: 'Spartan', cursive;
+    border: none;
+    padding: $small-size;
+    width: 100%;
+  
+    &:hover {
+      background-color: $light-base;
+      border: none;
+      color: $tan-base;
     }
   }
 }
@@ -736,13 +777,6 @@ $large-font: 24px;
   font-family: 'Spartan', sans-serif;
   font-weight: bold;
   font-size: $med-size;
-}
-
-.title {
-  color: $light-base;
-  margin: $small-size;
-  font-family: 'Spartan', sans-serif;
-  font-weight: bold;
 }
 
 .welcome {
@@ -809,12 +843,13 @@ $large-font: 24px;
 
   .dividerTitle {
     border-bottom: 1px solid $white;
-    padding: $small-size;
+    padding: 20px;
   }
 
   .experienceCard {
     flex-direction: column;
     height: 300px;
+    max-height: 300px;
     margin: $small-size;
     padding: $small-size;
     width: 300px;
@@ -872,6 +907,11 @@ $large-font: 24px;
     width: 100%;
   }
 
+  .meText {
+    max-width: 350px;
+    text-align: center;
+  }
+
   .moon {
     display: none;
   }
@@ -884,11 +924,13 @@ $large-font: 24px;
   .projectCardBottom {
     align-items: center;
     justify-content: center;
+    min-width: 300px;
   }
 
   .projectCardContainer {
     flex-direction: column;
     text-align: center;
+    width: 300px;
   }
   
   .projectText {
@@ -906,7 +948,7 @@ $large-font: 24px;
   }
 
   .skillTitle {
-    width: 200px;
+    max-width: 100%;
   }
   
   .tabs {
@@ -921,6 +963,10 @@ $large-font: 24px;
   
   .text {
     width: 100%;
+  }
+
+  .leftTitle {
+    text-align: center;
   }
 
   .video {
