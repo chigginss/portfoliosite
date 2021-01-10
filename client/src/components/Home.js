@@ -60,9 +60,9 @@ class Home extends Component {
   render() {
 
     const StyledButton = styled.a`
-        color: #6564DB;
+        color: #FFCF99;
         background-color: transparent;
-        border: 1px solid #6564DB;
+        border: 1px solid #FFCF99;
         border-radius: 10px;
         font-size: 18px;
         font-family: 'Bungee', cursive;
@@ -71,8 +71,8 @@ class Home extends Component {
         margin-top: 20px;
 
         :hover {
-            background-color: rgb(23, 41, 90);
-            color: #ffffff;
+            color: #354674;
+            border: 1px solid #354674;
             text-decoration: none
         }
 
@@ -88,7 +88,7 @@ class Home extends Component {
             <SideBar />
           </div>
           <Welcome hideChev={this.state.hideChev} />
-          <div className="mainSection" style={{ opacity: `${this.state.opacity}`}}>
+          <div className="mainSection fadeIn" style={{ opacity: `${this.state.opacity}`}}>
             <Divider text={'ABOUT'}/>
             <About/>
             <Divider text={'EXPERIENCE'}/>
@@ -98,8 +98,8 @@ class Home extends Component {
             <Projects />
             <Divider text={'CONTACT'}/>
             <div className="contact">
-                <h1 className="title">Let's Chat!</h1>
-                <div className="text">I'm currently not looking for work, but I'm always happy to connect.</div>
+                <h1 className="centerTitle">Let's Chat!</h1>
+                <div className="text">Inquiries and Star Wars trivia are always welcome. I'll do my best to get back to you quickly.</div>
                 <StyledButton href="mailto:cierramhiggins@gmail.com">CONTACT ME</StyledButton>
             </div>
           </div>

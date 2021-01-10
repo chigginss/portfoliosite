@@ -24,9 +24,9 @@ class Welcome extends Component {
   render() {
     const ScrollDown = styled.span`    
         align-items: center;
-        border-left: 3px solid #fff;
-        border-bottom: 3px solid #fff;
-        color: #6564DB;
+        border-left: 3px solid #FFCF99;
+        border-bottom: 3px solid #FFCF99;
+        color: #111D4A;
         display: flex;
         height: 24px;
         justify-content: center;
@@ -38,6 +38,12 @@ class Welcome extends Component {
         -webkit-animation: sdb04 2s infinite;
         animation: sdb04 2s infinite;
         box-sizing: border-box;
+
+        &:hover {
+            border-left: 3px solid #354674;
+            border-bottom: 3px solid #354674;
+        }
+
         @-webkit-keyframes sdb04 {
             0% {
                 -webkit-transform: rotate(-45deg) translate(0, 0);
@@ -71,11 +77,11 @@ class Welcome extends Component {
             <div className="welcome">
                 <WelcomeArt />
                 <div className="welcomeText">
-                    <div className="hugeTitle">I'm Cierra!</div>
+                    <div className="hugeTitle">Cierra Higgins</div>
                     <p className="text">
-                        I'm a CSSTH lord and full stack software developer based in San Francisco.
+                       FULL STACK SOFTWARE ENGINEER
                     </p>
-                    <div className="text">Animation made entirely with CSS</div>
+                    <div className="skillTitle">ANIMATION MADE WITH CSS</div>
                     <a className="scrollDown" href="#about" style={{ display: `${this.props.hideChev}`}}>
                         <ScrollDown/>
                     </a>
