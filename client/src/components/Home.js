@@ -101,7 +101,7 @@ class Home extends Component {
             <Divider text={'CONTACT'}/>
             <div className="contact">
                 <h1 className="centerTitle">Let's Chat!</h1>
-                <div className="text">Inquiries and Star Wars trivia are always welcome. I'll do my best to get back to you quickly.</div>
+                <div className="text">I'm always happy to connect. I'll do my best to get back to you quickly.</div>
                 <StyledButton href="mailto:cierramhiggins@gmail.com">CONTACT ME</StyledButton>
             </div>
           </div>

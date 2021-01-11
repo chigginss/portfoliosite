@@ -32,9 +32,9 @@ class Experience extends Component {
               position={'Software Engineer'}
               date={'August 2018 - Present (2 Years, 6 months)'}
               texts={[
-                'Designed and implemented a myriad of features on web and mobile platforms for consumer and enterprise users',
-                'Improved Web Accessibility to meet WCAG AA standards',
-                'Designed and created admin tools for internal use'
+                'Develop new features for web and mobile platforms.',
+                'Improve performance and functionality of existing product. Led significant a11y development to meet WCAG AA standards.',
+                'Support internal teams by creating new tools and pulling data for customer reporting.'
               ]}
             />
           </div>

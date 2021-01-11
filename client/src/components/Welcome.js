@@ -81,7 +81,6 @@ class Welcome extends Component {
                     <p className="text">
                        FULL STACK SOFTWARE ENGINEER
                     </p>
-                    <div className="skillTitle">ANIMATION MADE WITH CSS</div>
                     <a className="scrollDown" href="#about" style={{ display: `${this.props.hideChev}`}}>
                         <ScrollDown/>
                     </a>
