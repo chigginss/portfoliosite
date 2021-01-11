@@ -1,7 +1,7 @@
 // GOOGLE FONTS
 @import url('https://fonts.googleapis.com/css2?family=Arvo&family=Bungee&family=Josefin+Sans&family=Mukta:wght@200&family=Spartan:wght@200;570;600&family=Yanone+Kaffeesatz:wght@200&display=swap');
 // COLORS
-$light-base: #354674; // #89D2DC;
+$light-base: #7E86B4;
 $navy-base: #111D4A;
 $tan-base: #FFCF99;
 $white: #FFF8F0;
@@ -551,6 +551,7 @@ $large-font: 24px;
   .projectText {
     background-color: $light-base;
     border-radius: 3px;
+    color: $navy-base;
     font-size: $med-size - 2;
     padding: $med-size;
     margin-left: $med-size;

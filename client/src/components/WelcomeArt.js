@@ -5,7 +5,7 @@ class WelcomeArt extends Component {
 
   render() {
     return (
-      <div>
+      <body>
         <section className="main">
     
           <span className="absolute sun"></span>
@@ -54,7 +54,7 @@ class WelcomeArt extends Component {
             </ul>
           </div>
         </section>
-      </div>
+      </body>
     );
   }
 }

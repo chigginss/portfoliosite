@@ -6,6 +6,8 @@ import Experience from './Experience.js';
 import FooterArt from './FooterArt.js';
 import Projects from './Projects.js';
 import Welcome from './Welcome.js';
+// Content
+import Resume from '../content/CierraHigginsResume.pdf';
 // SVG components
 import LinkedInIcon from '../icons/LinkedInIcon.js';
 import GitHubIcon from '../icons/GitHubIcon.js';
@@ -93,13 +95,13 @@ class Home extends Component {
             <About/>
             <Divider text={'EXPERIENCE'}/>
             <Experience/>
-            <StyledButton download="resume" href="resume.pdf" target="_blank">DOWNLOAD RESUME</StyledButton>
+            <StyledButton download="resume" href={Resume} target="_blank">DOWNLOAD RESUME</StyledButton>
             <Divider text={'PROJECTS'}/>
             <Projects />
             <Divider text={'CONTACT'}/>
             <div className="contact">
                 <h1 className="centerTitle">Let's Chat!</h1>
-                <div className="text">Inquiries and Star Wars trivia are always welcome. I'll do my best to get back to you quickly.</div>
+                <div className="text">I'm always happy to connect. I'll do my best to get back to you quickly.</div>
                 <StyledButton href="mailto:cierramhiggins@gmail.com">CONTACT ME</StyledButton>
             </div>
           </div>

@@ -11,13 +11,13 @@ class About extends Component {
         <div className="aboutMeContainer">
           <img className="portrait" src={portrait} alt="portrait" />
           <div className="aboutMe">
-            <p className="meText">I'm a Software Engineer currently located in San Francisco. I enjoy creating highly responsive applications and websites that provide exceptional user experience.</p>
+            <p className="meText">I'm a Software Engineer currently located in San Francisco. I enjoy creating highly responsive applications and websites.</p>
             <p className="meText">
               I received my B.A. in English Literature (with a focus in International Affairs) at <a className="link" href="https://www.lclark.edu/">Lewis & Clark College</a>. 
-              After graduation, I completed <a className="link" href="https://hackbrightacademy.com/"> Hackbright Academy's </a> 
+              After graduation, I completed<a className="link" href="https://hackbrightacademy.com/"> Hackbright Academy's </a> 
               Software Engineering course. For the last few years, I've worked as an Software Engineer at 
               <a className="link" href=""> Grokker.</a></p>
-              <p className="meText">When I'm not coding, I love going on hikes, playing video games and creative photography.</p>
+              <p className="meText">When I'm not coding, I love going on hikes, playing video games and photo and video projects.</p>
               <div className="columnContainer">
                 <div className="column">
                   <div className="skillTitle">LANGUAGES</div>
@@ -29,7 +29,7 @@ class About extends Component {
                   <div>PostGres</div>
                 </div>
                 <div className="column">
-                  <div className="skillTitle">FRAMEWORKS</div>
+                  <div className="skillTitle">LIBRARIES AND FRAMEWORKS</div>
                   <div>Node.js</div>
                   <div>React</div>
                   <div>React Native</div>
