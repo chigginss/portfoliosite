@@ -16,7 +16,7 @@
   "bugs": {
     "url": "https://github.com/chigginss/portfoliosite/issues"
   },
-  "homepage": "https://github.com/chigginss/portfoliosite#readme",
+  "homepage": "https://chiggins-portfolio-site.herokuapp.com/"
   "dependencies": {
     "bootstrap": "^4.5.0",
     "express": "^4.17.1",
