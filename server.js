@@ -7,7 +7,7 @@ app.listen(port, () => console.log(`Listening on port ${port}`));
 
 // create a GET route
 app.get('/', (req, res) => {
-  res.render('index', {});
+  res.render('index.html', {});
 });
 
 if (process.env.NODE_ENV === 'production') {
