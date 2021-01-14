@@ -8,7 +8,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get('/', (req, res) => {
-  res.send({ express: 'Hello From Express' });
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
 //set default engine, and provide [handlebars as] extension
