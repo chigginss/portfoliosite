@@ -1,1 +1,1 @@
-web: NODE_ENV=production npm run start
+web: NODE_ENV=production concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"
