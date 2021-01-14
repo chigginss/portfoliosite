@@ -14,7 +14,7 @@
     "react-bootstrap-tabs": "^2.0.0",
     "react-dom": "^16.14.0",
     "react-is": "^16.13.1",
-    "react-scripts": "3.4.1",
+    "react-scripts": "^3.4.1",
     "react-tabs": "^3.1.2",
     "styled-components": "^5.2.1"
   },
