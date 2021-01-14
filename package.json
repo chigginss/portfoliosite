@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node ./client/src/index.js"
+    "start": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
+    "client": "cd client && npm run start",
+    "server": "nodemon server.js",
+    "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\""
   },
   "repository": {
     "type": "git",
@@ -19,6 +22,7 @@
   "homepage": "https://chiggins-portfolio-site.herokuapp.com/",
   "dependencies": {
     "bootstrap": "^4.5.0",
+    "concurrently": "^5.3.0",
     "express": "^4.17.1",
     "react": "^16.13.1",
     "react-bootstrap": "^1.3.0",

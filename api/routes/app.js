@@ -17,7 +17,7 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use( express.static(path.join(application_root)));
+app.use(express.static(path.join(__dirname, { index: 'default.htm' })));
 
 app.use('/', indexRouter);
 

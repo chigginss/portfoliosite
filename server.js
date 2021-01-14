@@ -1,20 +1,17 @@
 const express = require('express');
+const bodyParser = require('body-parser');
+
 const app = express();
 const port = process.env.PORT || 5000;
 
-// check server is up and running
-app.listen(port, () => console.log(`Listening on port ${port}`));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
-// create a GET route
 app.get('/', (req, res) => {
-  res.render('index.html', {});
+  res.send({ express: 'Hello From Express' });
 });
 
-if (process.env.NODE_ENV === 'production') {
-  app.use(express.static('client/build'));
+//set default engine, and provide [handlebars as] extension
+app.set('view engine', 'jade');
 
-  // Express serve up index.html file if it doesn't recognize route
-  const path = require('path');
-  app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
- });
+app.listen(port, () => console.log(`Listening on port ${port}`));
