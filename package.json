@@ -6,7 +6,7 @@
   "scripts": {
     "client": "cd client && yarn start",
     "dev:start": "concurrently --kill-others-on-fail \"yarn client\" \"yarn start\"",
-    "start": "node /client/src/index.js",
+    "start": "node server.js",
     "heroku-postbuild": "cd client && yarn run build"
   },
   "repository": {
