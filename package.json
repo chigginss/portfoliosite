@@ -4,11 +4,11 @@
   "description": "Personal Portfolio Site",
   "main": "index.js",
   "scripts": {
-    "client-install": "yarn add --prefix client",  
+    "client-install": "yarn --prefix client",  
     "client": "cd client && yarn start",
     "dev:start": "concurrently --kill-others-on-fail \"yarn client\" \"yarn start\"",
     "start": "cd client/src && node index.js",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false yarn add --prefix client && yarn run build --prefix client"
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false yarn --prefix client && yarn run build --prefix client"
   },
   "repository": {
     "type": "git",
