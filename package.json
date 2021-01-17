@@ -4,11 +4,10 @@
   "description": "Personal Portfolio Site",
   "main": "index.js",
   "scripts": {
-    "client": "cd build/client/ && yarn start",
-    "dev:start": "concurrently --kill-others-on-fail \"yarn client\" \"yarn server\"",
-    "heroku-postbuild": "yarn run client",
-    "server": "node server.js",
-    "start": "yarn run client"
+    "client": "cd client && yarn start",
+    "dev:start": "concurrently --kill-others-on-fail \"yarn client\" \"yarn start\"",
+    "start": "node server.js",
+    "heroku-postbuild": "cd client && yarn add --only=dev && yarn add && yarn run build"
   },
   "repository": {
     "type": "git",
