@@ -1,1 +1,1 @@
-web: NODE_ENV=production npm run start
+web: yarn run build
