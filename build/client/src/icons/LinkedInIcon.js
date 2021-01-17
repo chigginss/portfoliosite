@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import '../css/portfolio.scss';
 
 const LinkedInIcon = ({
@@ -22,6 +22,5 @@ const LinkedInIcon = ({
         />
     </svg>
 );
-  
 
 export default LinkedInIcon;

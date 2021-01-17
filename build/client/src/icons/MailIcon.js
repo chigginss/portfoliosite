@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import '../css/portfolio.scss';
 
 const MailIcon = ({
@@ -23,5 +23,4 @@ const MailIcon = ({
     </svg>
 );
   
-
 export default MailIcon;

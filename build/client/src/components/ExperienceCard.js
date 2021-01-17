@@ -1,4 +1,4 @@
-import React, { Component, List } from 'react';
+import React, { Component } from 'react';
 import '../css/portfolio.scss';
 
 class ExperienceCard extends Component {

@@ -16,7 +16,7 @@ class About extends Component {
               I received my B.A. in English Literature (with a focus in International Affairs) at <a className="link" href="https://www.lclark.edu/">Lewis & Clark College</a>. 
               After graduation, I completed<a className="link" href="https://hackbrightacademy.com/"> Hackbright Academy's </a> 
               Software Engineering course. For the last few years, I've worked as an Software Engineer at 
-              <a className="link" href=""> Grokker.</a></p>
+              <a className="link" href="grokker.com"> Grokker.</a></p>
               <p className="meText">When I'm not coding, I love going on hikes, playing video games and photo and video projects.</p>
               <div className="columnContainer">
                 <div className="column">
