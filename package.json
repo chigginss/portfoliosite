@@ -4,12 +4,14 @@
   "description": "Personal Portfolio Site",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "concurrently --kill-others-on-fail \"yarn run client\" \"yarn run server\"",
-    "client": "cd build/client && yarn run start",
-    "server": "node server.js",
-    "build": "concurrently --kill-others-on-fail \"yarn run client\" \"yarn run server\"",
-    "dev": "concurrently --kill-others-on-fail \"yarn run server\" \"yarn run client\""
+    "build": "cd build/client/ && react-scripts build && (cd ../.. && yarn install) && yarn start",
+    "client": "cd build/client/ && yarn start",
+    "dev:start": "concurrently --kill-others-on-fail \"yarn client\" \"yarn server\"",
+    "dev:server": "cd build/client/ && yarn build && cd .. && yarn start",
+    "heroku-postbuild": "yarn run client",
+    "server": "nodemon server.js",
+    "start-client": "react-scripts start",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
