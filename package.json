@@ -7,7 +7,7 @@
     "client": "cd client && yarn start",
     "dev:start": "concurrently --kill-others-on-fail \"yarn client\" \"yarn start\"",
     "start": "node /client/src/index.js",
-    "heroku-postbuild": "cd client && yarn && yarn run build"
+    "heroku-postbuild": "cd client && yarn run build"
   },
   "repository": {
     "type": "git",
