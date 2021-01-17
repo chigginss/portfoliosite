@@ -5,11 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
+    "start": "concurrently --kill-others-on-fail \"yarn run server\" \"yarn run client\"",
     "client": "cd build/client && yarn run start",
     "server": "node server.js",
-    "build": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
-    "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\""
+    "build": "concurrently --kill-others-on-fail \"yarn run server\" \"yarn run client\"",
+    "dev": "concurrently --kill-others-on-fail \"yarn run server\" \"yarn run client\""
   },
   "repository": {
     "type": "git",
