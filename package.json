@@ -7,7 +7,7 @@
     "client-install": "yarn --prefix client",  
     "client": "cd client && yarn start",
     "dev:start": "concurrently --kill-others-on-fail \"yarn client\" \"yarn start\"",
-    "start": "cd client/src && node index.js",
+    "start": "node server.js",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false yarn --prefix client && yarn run start --prefix client"
   },
   "repository": {
