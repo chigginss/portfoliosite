@@ -40,7 +40,7 @@ class Projects extends Component {
                 </a>
               </div>
             </div>
-            <video className="video" width="190" autoPlay loop >
+            <video className="video" width="190" muted="true" autoPlay loop >
             <source src={wday} type="video/mp4"/>
             </video>
           </div>
@@ -54,7 +54,7 @@ class Projects extends Component {
               </h2>
               <p className="projectText">A web app that displays trending news in a D3.js visual that provides context for bias and popularity of the news outlet. Users can create accounts, create a list of favorite topics and share results.</p>
               <div className="projectCardBottom">
-                <p className="skillTitle">PYTHON JQUERY D3.JS AJAX POSTGRES HTML CSS BOOTSTRAP JINJA2</p>
+                <p className="skillTitle">PYTHON JQUERY D3.JS AJAX POSTGRES HTML CSS BOOTSTRAP</p>
                 <a href='https://github.com/chigginss/Newsflash'>
                     <GitHubIcon />
                 </a>

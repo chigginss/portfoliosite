@@ -306,7 +306,7 @@ $large-font: 24px;
 .experineceCardText {
   color: $white;
   font-family: 'Spartan', sans-serif;
-  font-size: calc($small-size + 2vmin);
+  font-size: 16px;
   text-align: left;
 }
 
@@ -367,7 +367,7 @@ $large-font: 24px;
   display: flex;
   flex-direction: column;
   font-family: 'Spartan', sans-serif;
-  font-size: calc($small-size + 2vmin);
+  font-size: $small-size;
   justify-content: space-between;
   margin: 0px;
   text-align: center;
@@ -569,7 +569,7 @@ $large-font: 24px;
   .projectCardText {
     color: $white;
     font-family: 'Spartan', sans-serif;
-    font-size: calc($small-size + 2vmin);
+    font-size: $small-size;
     max-width: 600px;
     text-align: left;
     z-index: 1;
@@ -703,7 +703,7 @@ $large-font: 24px;
   display: flex;
   flex-direction: column;
   font-family: 'Montserrat', sans-serif;
-  font-size: calc($small-size + 2vmin);
+  font-size: $small-size;
   justify-content: space-between;
   padding: $small-size;
   text-align: center;
