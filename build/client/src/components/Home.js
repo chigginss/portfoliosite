@@ -30,7 +30,7 @@ class Home extends Component {
   }
 
   callAPI() {
-      fetch("http://localhost:5000/")
+      fetch("http://localhost:8080/")
           .then(res => res.text())
           .then(res => this.setState({ apiResponse: res }));
   }
