@@ -8,7 +8,7 @@
     "client": "cd client && yarn start",
     "dev:start": "concurrently --kill-others-on-fail \"yarn client\" \"yarn start\"",
     "start": "cd client/src && node index.js",
-    "heroku-postbuild": "yarn build && cd client && yarn && yarn install --prod=true",
+    "heroku-postbuild": "yarn build && cd client && yarn && yarn install --prod=false",
     "build": "NODE_ENV=production webpack --config webpack"
   },
   "repository": {
