@@ -9,7 +9,7 @@ app.use('/', express.static(path.join(__dirname, "build")))
 
 // Right before your app.listen(), add this:
 app.get("*", (req, res) => {
-    res.sendFile(path.resolve(__dirname + '/app/build/client/index.html'))
+    res.sendFile(path.resolve(__dirname + '/build/client/index.html'))
 });
 
 app.listen(port);
