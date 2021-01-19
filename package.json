@@ -19,7 +19,7 @@
   "bugs": {
     "url": "https://github.com/chigginss/portfoliosite/issues"
   },
-  "homepage": "https://chiggins-portfolio-site.herokuapp.com/",
+  "homepage": ".",
   "dependencies": {
     "babel-cli": "^6.26.0",
     "bootstrap": "^4.5.0",
