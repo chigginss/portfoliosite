@@ -4,12 +4,11 @@
   "description": "Personal Portfolio Site",
   "main": "index.js",
   "scripts": {
-    "client-install": "yarn --prefix client",
-    "client": "cd client && yarn start",
-    "dev:start": "concurrently --kill-others-on-fail \"yarn client\" \"yarn start\"",
+    "client": "cd client && npm run start",
+    "dev:start": "concurrently --kill-others-on-fail \"npm run client\" \"npm run start\"",
     "start": "node server.js",
-    "heroku-postbuild": "cd client && yarn install && yarn run build",
-    "build": "cd client && yarn build"
+    "heroku-postbuild": "cd client && npm install && npm run build",
+    "build": "cd client && npm run start"
   },
   "repository": {
     "type": "git",
@@ -22,10 +21,12 @@
   },
   "homepage": "https://chiggins-portfolio-site.herokuapp.com/",
   "dependencies": {
+    "babel-cli": "^6.26.0",
     "bootstrap": "^4.5.0",
     "concurrently": "^5.3.0",
     "express": "^4.17.1",
     "express-favicon": "^2.0.1",
+    "jest": "^26.6.3",
     "node": "^15.4.0",
     "node-sass": "^4.14.1",
     "path": "^0.12.7",
@@ -35,6 +36,7 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "^4.0.1",
     "redux": "^4.0.5",
+    "sass": "^1.32.4",
     "styled-components": "^5.2.1",
     "video-react": "^0.14.1",
     "yarn": "^1.22.10"
