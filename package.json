@@ -7,7 +7,7 @@
     "client": "cd client && npm run start",
     "dev:start": "concurrently --kill-others-on-fail \"npm run client\" \"npm run start\"",
     "start": "node server.js",
-    "heroku-postbuild": "cd client && npm install && npm update && npm run build",
+    "heroku-postbuild": "cd client && npm update && npm install && npm run build",
     "build": "npm run start"
   },
   "repository": {
