@@ -678,13 +678,15 @@ $large-font: 24px;
   font-weight: bolder;
 }
 
-.scrollDown {
+.scrollContainer {
   align-items: center;
+  background-color: $light-base;
+  bottom: 0px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  text-align: center;
-  margin-top: $huge-size;
+  position: fixed;
+  width: 100%;
 }
 
 .sectionHeader {
@@ -693,6 +695,7 @@ $large-font: 24px;
   justify-content: center;
   margin-top: $huge-size;
   margin-bottom: $large-size;
+  padding-top: $huge-size;
   text-align: left;
   width: 65%;
 }

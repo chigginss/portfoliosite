@@ -10,10 +10,8 @@ class Welcome extends Component {
       window.onscroll = () => {
         let currentScrollPos = window.pageYOffset;
         let maxScroll = document.body.scrollHeight - window.innerHeight;
-        // console.log(maxScroll)
-        if (currentScrollPos < 400 && currentScrollPos < maxScroll) {
+        if (currentScrollPos < 100 && currentScrollPos < maxScroll) {
           this.setState({ opacity: '0' })
-          // console.log(currentScrollPos)
         } else {
           this.setState({ opacity: '1' })
         }
@@ -81,7 +79,7 @@ class Welcome extends Component {
                     <p className="text">
                        FULL STACK SOFTWARE ENGINEER
                     </p>
-                    <a className="scrollDown" href="#about" style={{ display: `${this.props.hideChev}`}}>
+                    <a className="scrollContainer" href="#about" style={{ display: `${this.props.hideChev}`}}>
                         <ScrollDown/>
                     </a>
                 </div>

@@ -45,7 +45,7 @@ class Home extends Component {
         let currentScrollPos = window.pageYOffset;
         let maxScroll = document.body.scrollHeight - window.innerHeight;
         if (currentScrollPos < 200 && currentScrollPos < maxScroll) {
-          this.setState({ opacity: '0', hideChev: 'block' })
+          this.setState({ opacity: '0', hideChev: 'flex' })
         } else {
           this.setState({ opacity: '1', hideChev: 'none' })
         }
