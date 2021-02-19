@@ -30,7 +30,7 @@ class Experience extends Component {
           <div className={this.state.activeTab === 'tab1' ? 'active' : 'hidden'}>
             <ExperienceCard
               position={'Software Engineer'}
-              date={'August 2018 - Present (2 Years, 6 months)'}
+              date={'September 2018 - Present (2 Years, 6 months)'}
               texts={[
                 'Develop new features for web and mobile platforms.',
                 'Improve performance and functionality of existing product. Led significant a11y development to meet WCAG AA standards.',

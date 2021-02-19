@@ -20,29 +20,28 @@ class About extends Component {
               <p className="meText">When I'm not coding, I love going on hikes, playing video games and working on photo and video projects.</p>
               <div className="columnContainer">
                 <div className="column">
-                  <div className="skillTitle">LANGUAGES</div>
-                  <div>JavaScript (ES6)</div>
-                  <div>HTML</div>
-                  <div>(S)CSS</div>
-                  <div>Python</div>
-                  <div>MongoDB</div>
-                  <div>PostGres</div>
+                  <div className="skillTitle">JAVASCRIPT (ES6)</div>
+                  <div className="skillTitle">PYTHON</div>
+                  <div className="skillTitle">MONGODB</div>
+                  <div className="skillTitle">(S)CSS</div>
+                  <div className="skillTitle">HTML</div>
+                  <div className="skillTitle">POSTGRESQL</div>
                 </div>
                 <div className="column">
-                  <div className="skillTitle">LIBRARIES AND FRAMEWORKS</div>
-                  <div>Node.js</div>
-                  <div>React</div>
-                  <div>React Native</div>
-                  <div>Jest</div>
-                  <div>Flask</div>
+                  <div className="skillTitle">NODE.JS</div>
+                  <div className="skillTitle">REACT</div>
+                  <div className="skillTitle">REACT NATIVE</div>
+                  <div className="skillTitle">EXPRESS.JS</div>
+                  <div className="skillTitle">JEST</div>
+                  <div className="skillTitle">D3.JS</div>
                 </div>
                 <div className="column">
-                  <div className="skillTitle">TOOLS</div>
-                  <div>Git / GitHub</div>
-                  <div>Linux</div>
-                  <div>Jira</div>
-                  <div>Confluence</div>
-                  <div>Jenkins</div>
+                  <div className="skillTitle">AWS</div>
+                  <div className="skillTitle">GIT</div>
+                  <div className="skillTitle">LINUX</div>
+                  <div className="skillTitle">SHELL SCRIPTING</div>
+                  <div className="skillTitle">JIRA</div>
+                  <div className="skillTitle">CONFLUENCE</div>
                 </div>
               </div>
           </div>
